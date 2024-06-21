@@ -167,7 +167,7 @@ bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/powermenu/powermenu.sh
 # If you're using Discord and want to make it run automatically the first time the machine starts up
 #exec --no-startup-id discord
 exec --no-startup-id lxpolkit
+exec_always --no-startup-id xcompmgr
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id xrandr --output LVDS-1 --mode 1440x900
-
