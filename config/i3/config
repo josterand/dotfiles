@@ -21,153 +21,160 @@
 
 
 
-# =======================================================================
-exec --no-startup-id dex --autostart --environment i3
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# System
+        exec --no-startup-id dex --autostart --environment i3
+        # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+        # screen before suspend. Use loginctl lock-session to lock your screen.
+        exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+        # Network Manager Applet
+        exec --no-startup-id nm-applet
 
-# Applets
-exec --no-startup-id nm-applet
-
-# Audio Volume Control From Keyboard
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-# =======================================================================
-
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/Sleepy-Frieren.jpg
-
-# Set Some Variables For Keybindings
-# I use "Shift" and call it a "Safety Key" because by using "Shift" I can avoid accidentally pressing a key (muscle memory :D) 
-set $safety Shift
-set $mod Mod4
-
-# Mod + LeftClick To Move Around, Mod + RightClick To Resize Window
-floating_modifier $mod
-
-# Font
-font pango:JetbrainsMono Nerd Font 10
-
-# Default Screen Orientation
-default_orientation horizontal
-
-# Window Appearance
-        # Delete Title
-        # I don't like using the title above the window
-        for_window [class="^.*"] border pixel 0
-
-        # Delete Border For Default & Floating Windows
-        default_border pixel 0
-        default_floating_border pixel 0
-        hide_edge_borders both
-
-        # Gaps
-        smart_gaps on
-        gaps inner 10px
-        gaps outer 5px
-
-        # Mouse Warping
-        mouse_warping none
-
-# Reload i3 Condiguration File
-bindsym $mod+$safety+c reload
-
-# Restart i3 (Useful When The Configuration File Has Been Edited And Want To See The Results)
-bindsym $mod+$safety+r restart
-
-# Window Focusing
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# Kill Focused Window
-bindsym $mod+$safety+q kill
-
-# Window Placements
-bindsym $mod+$safety+Left move left
-bindsym $mod+$safety+Down move down
-bindsym $mod+$safety+Up move up
-bindsym $mod+$safety+Right move right
-
-# Split Orientation
-bindsym $mod+$safety+h split h
-bindsym $mod+$safety+v split v
-
-# Fullscreen Mode For Focused Window
-bindsym $mod+$safety+F11 fullscreen toggle
-bindsym $mod+$safety+s layout stacking
-bindsym $mod+$safety+w layout tabbed
-bindsym $mod+$safety+e layout toggle split
-bindsym $mod+$safety+space floating toggle
-bindsym $mod+enter focus mode_toggle
-bindsym $mod+$safety+a focus parent
-
-# Workspaces Initiation
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
-# Switch Between Workspaces
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-
-# Move Focused Window To Workspace
-bindsym $mod+$safety+1 move container to workspace number $ws1
-bindsym $mod+$safety+2 move container to workspace number $ws2
-bindsym $mod+$safety+3 move container to workspace number $ws3
-bindsym $mod+$safety+4 move container to workspace number $ws4
-bindsym $mod+$safety+5 move container to workspace number $ws5
-bindsym $mod+$safety+6 move container to workspace number $ws6
-bindsym $mod+$safety+7 move container to workspace number $ws7
-bindsym $mod+$safety+8 move container to workspace number $ws8
-bindsym $mod+$safety+9 move container to workspace number $ws9
-bindsym $mod+$safety+0 move container to workspace number $ws10
-
-# Resize Mode For Active Window
-mode "resize" {
-        # Window Resize With Arrow Key
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        # Audio Volume Control From Keyboard
+        set $refresh_i3status killall -SIGUSR1 i3status
+        bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+        bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+        bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+        bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
         
-        # Exit "Window Resize" Mode
-        bindsym $mod+r mode "default"
-}
-# Activate / Enter The "Window Resize" Mode
-bindsym $mod+r mode "resize"
 
-# Application Launching Commands
-bindsym $mod+t exec gnome-terminal
-bindsym $mod+f exec thunar
-bindsym $mod+b exec brave-browser
-bindsym $mod+space exec --no-startup-id $HOME/.config/rofi/launcher/launcher.sh
-bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/powermenu/powermenu.sh
+        # Set Some Variables For Keybindings
+        # I use "Shift" and call it a "Safety Key" because by using "Shift" I can avoid accidentally pressing a key (muscle memory :D) 
+        set $safety Shift
+        set $mod Mod4
+        
+        # Mod + LeftClick To Move Around, Mod + RightClick To Resize Window
+        floating_modifier $mod
 
-# Startup Applications
-# If you're using Discord and want to make it run automatically the first time the machine starts up
-#exec --no-startup-id discord
-exec --no-startup-id lxpolkit
-exec_always --no-startup-id xcompmgr
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id autotiling
-exec_always --no-startup-id xrandr --output LVDS-1 --mode 1440x900
+        # Startup Applications
+        exec_always --no-startup-id xrandr --output LVDS-1 --mode 1440x900
+        exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/Sleepy-Frieren.jpg
+        exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+        # exec_always --no-startup-id xcompmgr
+        exec_always --no-startup-id autotiling
+        exec --no-startup-id lxpolkit
+
+        # If you're using Discord and want to make it run automatically the first time the machine starts up
+        #exec --no-startup-id discord
+        
+
+
+
+# Environment
+        # Window Appearance
+                # Delete Title
+                # I don't like using the title above the window
+                for_window [class="^.*"] border pixel 0
+
+                # Delete Border For Default & Floating Windows
+                # default_border pixel 0
+                # default_floating_border pixel 0
+                # hide_edge_borders both
+
+                # Gaps
+                smart_gaps off
+                gaps inner 10px
+                gaps outer 1px
+
+                # Mouse Warping
+                mouse_warping none
+
+        # Others
+                # Font
+                font pango:JetbrainsMono Nerd Font 10
+                
+                # Default Screen Orientation
+                default_orientation horizontal
+# Workspaces
+        # Workspaces Initiation
+        set $ws1 "1"
+        set $ws2 "2"
+        set $ws3 "3"
+        set $ws4 "4"
+        set $ws5 "5"
+        set $ws6 "6"
+        set $ws7 "7"
+        set $ws8 "8"
+        set $ws9 "9"
+        set $ws10 "10"
+
+# Keybindings
+        # Reload i3 Condiguration File
+        bindsym $mod+$safety+c reload
+
+        # Restart i3 (Useful When The Configuration File Has Been Edited And Want To See The Results)
+        bindsym $mod+$safety+r restart
+
+        # Window Focusing
+        bindsym $mod+Left focus left
+        bindsym $mod+Down focus down
+        bindsym $mod+Up focus up
+        bindsym $mod+Right focus right
+
+        # Kill Focused Window
+        bindsym $mod+$safety+q kill
+
+        # Window Placements
+        bindsym $mod+$safety+Left move left
+        bindsym $mod+$safety+Down move down
+        bindsym $mod+$safety+Up move up
+        bindsym $mod+$safety+Right move right
+
+        # Split Orientation
+        bindsym $mod+$safety+h split h
+        bindsym $mod+$safety+v split v
+
+        # Fullscreen Mode For Focused Window
+        bindsym $mod+$safety+F11 fullscreen toggle
+        bindsym $mod+$safety+s layout stacking
+        bindsym $mod+$safety+w layout tabbed
+        bindsym $mod+$safety+e layout toggle split
+        bindsym $mod+$safety+space floating toggle
+        bindsym $mod+enter focus mode_toggle
+        bindsym $mod+$safety+a focus parent
+
+        # Switch Between Workspaces
+        bindsym $mod+1 workspace number $ws1
+        bindsym $mod+2 workspace number $ws2
+        bindsym $mod+3 workspace number $ws3
+        bindsym $mod+4 workspace number $ws4
+        bindsym $mod+5 workspace number $ws5
+        bindsym $mod+6 workspace number $ws6
+        bindsym $mod+7 workspace number $ws7
+        bindsym $mod+8 workspace number $ws8
+        bindsym $mod+9 workspace number $ws9
+        bindsym $mod+0 workspace number $ws10
+
+        # Move Focused Window To Workspace
+        bindsym $mod+$safety+1 move container to workspace number $ws1
+        bindsym $mod+$safety+2 move container to workspace number $ws2
+        bindsym $mod+$safety+3 move container to workspace number $ws3
+        bindsym $mod+$safety+4 move container to workspace number $ws4
+        bindsym $mod+$safety+5 move container to workspace number $ws5
+        bindsym $mod+$safety+6 move container to workspace number $ws6
+        bindsym $mod+$safety+7 move container to workspace number $ws7
+        bindsym $mod+$safety+8 move container to workspace number $ws8
+        bindsym $mod+$safety+9 move container to workspace number $ws9
+        bindsym $mod+$safety+0 move container to workspace number $ws10
+
+        # Resize Mode For Active Window
+        mode "resize" {
+                # Window Resize With Arrow Key
+                bindsym Left resize shrink width 10 px or 10 ppt
+                bindsym Down resize grow height 10 px or 10 ppt
+                bindsym Up resize shrink height 10 px or 10 ppt
+                bindsym Right resize grow width 10 px or 10 ppt
+                
+                # Exit "Window Resize" Mode
+                bindsym $mod+r mode "default"
+        }
+        # Activate / Enter The "Window Resize" Mode
+        bindsym $mod+r mode "resize"
+
+        # Application Launching Commands
+        bindsym $mod+t exec xfce4-terminal
+        bindsym $mod+f exec thunar
+        bindsym $mod+b exec brave-browser
+        bindsym $mod+space exec --no-startup-id $HOME/.config/rofi/launcher/launcher.sh
+        bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/powermenu/powermenu.sh
+
+
