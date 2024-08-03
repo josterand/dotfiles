@@ -13,9 +13,6 @@
 #       - JetBrainsMono Nerd Fonts (recommended system fonts)
 #       - autotiling (for autotiling windows)
 
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-#           Colors (Theme)
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
 # Color Hex Code
 set $rosewater #f5e0dc
 set $flamingo #f2cdcd
@@ -53,12 +50,7 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-#               System
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-
 exec --no-startup-id dex --autostart --environment i3
-
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -83,15 +75,9 @@ floating_modifier $mod
 
 # Startup Applications
 exec_always --no-startup-id xrandr --output LVDS-1 --mode 1440x900
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/'Window Manager'/wallpaper.jpg
+exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id autotiling
 exec_always --no-startup-id lxpolkit
-# If you're using Discord and want to make it run automatically the first time the machine starts up
-#exec --no-startup-id discord
-
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-#   Desktop Environment & Appearance
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
 
 # Window Appearance
 # Delete Title cuz I don't like using the title above the window
@@ -129,10 +115,6 @@ default_orientation horizontal
          }
 }
 
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-#              Workspaces
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-
 # Workspaces Initiation
 set $ws1 "1"
 set $ws2 "2"
@@ -144,10 +126,6 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-#            Keybindings
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
 
 # Reload i3 Condiguration File
 bindsym $mod+$safety+c reload
