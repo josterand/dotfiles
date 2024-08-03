@@ -16,11 +16,10 @@ separator=false
 [cpu_usage]
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-command=~/.config/i3blocks/scripts/cpu_usage
+command=~/.config/i3blocks/scripts/cpu_usage -d 0
 label= 
 interval=1
 separator=false
-#DECIMALS=0
 
 [separator]
 
