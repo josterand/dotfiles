@@ -46,13 +46,13 @@ separator=false
 
 [separator]
 
-[user]
-label= 
-command=lslogins | grep $USER | awk '{print $2}'
-interval=once
-separator=false
+#[user]
+#label= 
+#command=lslogins | grep $USER | awk '{print $2}'
+#interval=once
+#separator=false
 
-[separator]
+#[separator]
 
 [date]
 label= 
