@@ -1,83 +1,18 @@
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-#                       Josterand's i3WM Config                         
-# •• ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ••
-# 
-# The Required Packages:
-#       - i3blocks(custom status bar)
-#       - rofi (app launcher)
-#       - feh (wallpaper)
-#	- xfce4-terminal(terminal)
-#       - lxappearance (appearance setting)
-#       - lxpolkit (sudo prompter)
-#       - xrandr (control brightness & monitor)
-#       - JetBrainsMono Nerd Fonts (recommended system fonts)
-#       - autotiling (for autotiling windows)
-
-# Color Hex Code
-set $rosewater #f5e0dc
-set $flamingo #f2cdcd
-set $pink #f5c2e7
-set $mauve #cba6f7
-set $red #f38ba8
-set $maroon #eba0ac
-set $peach #fab387
-set $yellow #f9e2af
-set $green #a6e3a1
-set $teal #94e2d5
-set $sky #89dceb
-set $sapphire #74c7ec
-set $blue #89b4fa
-set $lavender #b4befe
-set $text #cdd6f4
-set $subtext1 #bac2de
-set $subtext0 #a6adc8
-set $overlay2 #9399b2
-set $overlay1 #7f849c
-set $overlay0 #6c7086
-set $surface2 #585b70
-set $surface1 #45475a
-set $surface0 #313244
-set $base #1e1e2e
-set $mantle #181825
-set $crust #11111b
+set $base #070E26
+set $text #F6F0F5
+set $red #F23847
+set $blood #8C2020
+set $blue #0A8CBF
+set $sea #18C5D9
 
 # Color Variables
 # target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $lavender
-client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
-client.unfocused         $overlay0 $base $text  $rosewater $overlay0
-client.urgent            $peach    $base $peach $overlay0  $peach
-client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
-client.background        $base
-
-exec --no-startup-id dex --autostart --environment i3
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# Network Manager Applet
-exec --no-startup-id nm-applet
-
-# Audio Volume Control From Keyboard
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Set Some Variables For Keybindings
-# I use "Shift" and call it a "Safety Key" because by using "Shift" I can avoid accidentally pressing a key (muscle memory :D) 
-set $safety Shift
-set $mod Mod4
-
-# Mod + LeftClick To Move Around, Mod + RightClick To Resize Window
-floating_modifier $mod
-
-# Startup Applications
-exec_always --no-startup-id xrandr --output LVDS-1 --mode 1440x900
-exec --no-startup-id nitrogen --restore
-exec_always --no-startup-id autotiling
-exec_always --no-startup-id lxpolkit
+# class                 border  bground text    indicator child_border
+client.focused          #8C2020 #050D26 #F6F0F5 #8C2020   #8C2020
+client.focused_inactive #050D26 #050D26 #F6F0F5 #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #F6F0F5 #900000   #900000
+client.placeholder      #000000 #0C0C0C #F6F0F5 #000000   #0C0C0C
 
 # Window Appearance
 # Delete Title cuz I don't like using the title above the window
@@ -97,23 +32,51 @@ font pango:JetbrainsMono Nerd Font 10
 
 # Default Screen Orientation
 default_orientation horizontal
+exec --no-startup-id dex --autostart --environment i3
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Network Manager Applet
+exec --no-startup-id nm-applet
+
+# Set Some Variables For Keybindings
+# I use "Shift" and call it a "Safety Key" because by using "Shift" I can avoid accidentally pressing a key (muscle memory :D) 
+set $safety Shift
+set $mod Mod4
+
+# Audio Volume Control From Keyboard
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+floating_modifier $mod
+
+# Startup Applications
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id xrandr --output LVDS-1 --mode 1440x900
+exec --no-startup-id nitrogen --restore
+exec_always --no-startup-id autotiling
+exec_always --no-startup-id lxpolkit
 
 # Bar
- bar {
-         position top
-         status_command i3blocks -c ~/.config/i3blocks/config
-         colors {
-                 background         $base
-                 statusline         $text
-                 focused_statusline $text
-                 focused_separator  $base
-                 focused_workspace  $base $base $green
-                 active_workspace   $base $base $blue
-                 inactive_workspace $base $base $surface1
-                 urgent_workspace   $base $base $surface1
-                 binding_mode       $base $base $surface1
-         }
-}
+# bar {
+#          position top
+#          status_command i3blocks -c ~/.config/i3blocks/config
+#          colors {
+#                  background         $base
+#                  statusline         $text
+#                  focused_statusline $text
+#                  focused_separator  $base
+#                  focused_workspace  $base $base $red
+#                  active_workspace   $base $base $red
+#                  inactive_workspace $base $base $text
+#                  urgent_workspace   $base $base $text
+#                  binding_mode       $base $base $text
+#          }
+# }
 
 # Workspaces Initiation
 set $ws1 "1"
@@ -126,6 +89,13 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# Application Launching Commands
+bindsym $mod+t exec --no-startup-id alacritty
+bindsym $mod+b exec --no-startup-id brave-browser
+bindsym $mod+f exec --no-startup-id thunar
+bindsym $mod+space exec --no-startup-id $HOME/.config/rofi/launcher/launcher.sh
+bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/powermenu/powermenu.sh
 
 # Reload i3 Condiguration File
 bindsym $mod+$safety+c reload
@@ -196,11 +166,6 @@ mode "resize" {
         # Exit "Window Resize" Mode
         bindsym $mod+r mode "default"
 }
+
 # Activate / Enter The "Window Resize" Mode
 bindsym $mod+r mode "resize"
-
-# Application Launching Commands
-bindsym $mod+t exec --no-startup-id alacritty
-bindsym $mod+b exec --no-startup-id brave-browser
-bindsym $mod+space exec --no-startup-id $HOME/.config/rofi/launcher/launcher.sh
-bindsym $mod+p exec --no-startup-id $HOME/.config/rofi/powermenu/powermenu.sh
