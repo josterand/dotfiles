@@ -1,0 +1,15 @@
+set $base #070E26
+set $text #F6F0F5
+set $red #F23847
+set $blood #8C2020
+set $blue #0A8CBF
+set $sea #18C5D9
+
+# Color Variables
+# target                 title     bg    text   indicator  border
+# class                 border  bground text    indicator child_border
+client.focused          #18C5D9 #050D26 #F6F0F5 #18C5D9   #18C5D9
+client.focused_inactive #050D26 #050D26 #F6F0F5 #484E50   #5F676A
+client.unfocused        #333333 #222222 #888888 #292D2E   #222222
+client.urgent           #2F343A #900000 #F6F0F5 #900000   #900000
+client.placeholder      #000000 #0C0C0C #F6F0F5 #000000   #0C0C0C
