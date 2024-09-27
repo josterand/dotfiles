@@ -6,9 +6,6 @@ alias fstow='stow -d $HOME/dotfiles .'
 alias dstow='stow -D -d $HOME/dotfiles .'
 alias rstow='stow -D -d $HOME/dotfiles . && stow -d $HOME/dotfiles .'
 
-# PATHs
-export PATH=/home/josterand/Emulated/bin:$PATH
-
 # ZSH Themes
 source ~/.zsh/themes/steeef.zsh-theme
 
