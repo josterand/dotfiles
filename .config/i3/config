@@ -3,12 +3,11 @@ include ~/.config/i3/colors
 # Window Appearance
 font pango:JetbrainsMono Nerd Font 10
 default_orientation horizontal
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 hide_edge_borders both
-gaps inner 5px
-gaps outer 5px
-gaps bottom 0px
 mouse_warping none
+gaps inner 10px
+smart_gaps true
 
 # Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -35,6 +34,7 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id lxpolkit
 
 # Application Launching Commands
+bindsym $mod+w exec --no-startup-id wifimenu
 bindsym $mod+t exec --no-startup-id alacritty
 bindsym $mod+b exec --no-startup-id brave-browser
 bindsym $mod+f exec --no-startup-id thunar
