@@ -1,0 +1,60 @@
+# Window Manager
+bspwm
+sxhkd
+polybar
+rofi
+dunst
+feh
+i3lock
+lxappearance
+lxsession
+stow
+
+# File Manager
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
+tumbler
+gvfs
+gvfs-mtp
+
+# System Tools
+unrar
+unzip
+p7zip
+xfce4-power-manager
+xfce4-screenshooter
+git
+fastfetch
+gnome-disk-utility
+htop
+python
+tmux
+tree
+xarchiver
+nano
+nano-syntax-highlighting
+
+# Multimedia and Codecs
+btrfs-progs
+e2fsprogs
+exfatprogs
+f2fs-tools
+mtpfs
+nfs-utils
+nilfs-utils
+ntfs-3g
+xfsprogs
+mtools
+
+# Applications
+alacritty
+code
+discord
+gimp
+xed
+telegram-desktop
+vlc
+obsidian
+libreoffice-still
