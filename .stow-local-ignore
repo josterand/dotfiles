@@ -1,0 +1,13 @@
+# Development environment configurations
+/.git
+/.github
+/.vscode
+/.editorconfig
+/.gitignore
+
+# Temporary files and folders
+/tmp
+
+# Files
+/README.md
+/LICENSE
