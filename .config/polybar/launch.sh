@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# ***************************************************
+# Author: Jonathan Steve Roland (josterand)
+# Github: https://github.com/josterand
+#
+# This project is licensed under the MIT License.
+# Copyright (c) 2024 Jonathan Steve Roland (josterand).
+# For detailed terms and conditions, please refer to
+# the LICENSE file included with this project.
+# ***************************************************
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 2; done
+
+# Launch the bar
+polybar -q top-bar -c ~/.config/polybar/config.ini &
+# polybar -q bottom-bar -c ~/.config/polybar/config.ini &
