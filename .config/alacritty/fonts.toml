@@ -1,0 +1,40 @@
+## ***************************************************
+## Author: Jonathan Steve Roland (josterand)
+## Github: https://github.com/josterand
+##
+## This project is licensed under the MIT License.
+## Copyright (c) 2024 Jonathan Steve Roland (josterand).
+## For detailed terms and conditions, please refer to
+## the LICENSE file included with this project.
+## ***************************************************
+
+[font]
+size = 8
+## Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
+builtin_box_drawing = true
+
+[font.normal]
+family  = "JetBrains Mono"
+
+[font.italic]
+family  = "JetBrains Mono"
+
+[font.bold]
+family  = "JetBrains Mono"
+
+[font.bold_italic]
+family  = "JetBrains Mono"
+
+[font.offset]
+## Extra space around each character.
+## 'x' for modifying the letter spacing.
+## 'y' for modifying the line spacing.
+x = 0
+y = 0
+
+[font.glyph_offset]
+## Determines the locations of the glyphs within their cells with the default being at the bottom.
+## Modify 'x' to move the glyph to the right.
+## Modify 'y' to move the glyph upward.
+x = 0
+y = 0

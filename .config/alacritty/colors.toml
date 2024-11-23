@@ -1,0 +1,36 @@
+## ***************************************************
+## Author: Jonathan Steve Roland (josterand)
+## Github: https://github.com/josterand
+##
+## This project is licensed under the MIT License.
+## Copyright (c) 2024 Jonathan Steve Roland (josterand).
+## For detailed terms and conditions, please refer to
+## the LICENSE file included with this project.
+## ***************************************************
+
+[colors]
+transparent_background_colors = false
+
+[colors.primary]
+background  =   "#212121"
+foreground  =   "#E0E0E0"
+
+[colors.normal]
+black   =   "#21222c"
+red     =   "#ff5555"
+green   =   "#50fa7b"
+yellow  =   "#f1fa8c"
+blue    =   "#bd93f9"
+magenta =   "#ff79c6"
+cyan    =   "#8be9fd"
+white   =   "#f8f8f2"
+
+[colors.bright]
+black   =   "#6272a4"
+red     =   "#ff6e6e"
+green   =   "#69ff94"
+yellow  =   "#ffffa5"
+blue    =   "#d6acff"
+magenta =   "#ff92df"
+cyan    =   "#a4ffff"
+white   =   "#ffffff"
