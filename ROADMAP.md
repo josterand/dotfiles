@@ -1,0 +1,7 @@
+- [ ] Change the bar font from JetBrains Mono to Inter.
+- [ ] Change the launcher font from JetBrains Mono to Inter.
+- [ ] Dunst color scheme and font to match the system.
+- [ ] Clean, edit, and add more keyboard combination to sxhkd.
+- [ ] Look for good wallpaper.
+- [ ] Create installation script so the rice will not depend on GNU Stow again.
+- [ ] Maintain repo cleanliness.
