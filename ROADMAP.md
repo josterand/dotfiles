@@ -1,7 +1,12 @@
-- [ ] Change the bar font from JetBrains Mono to Inter.
-- [ ] Change the launcher font from JetBrains Mono to Inter.
-- [ ] Dunst color scheme and font to match the system.
-- [ ] Clean, edit, and add more keyboard combination to sxhkd.
-- [ ] Look for good wallpaper.
-- [ ] Create installation script so the rice will not depend on GNU Stow again.
-- [ ] Maintain repo cleanliness.
+- [ ] Polybar: Drop 'JetBrains Mono' for 'Inter' Font.
+- [ ] Polybar: Pacman update module.
+- [ ] Polybar: Brightness control module.
+- [ ] Rofi: Drop 'JetBrains Mono' for 'Inter' Font.
+- [ ] Rofi: Separate configuration for each launcher script.
+- [ ] Dunst: Fix color scheme to match the rest of the system
+- [ ] Dunst: Fix font to match the rest of the system.
+- [ ] SXHKD: Code refactoring and new keybindings.
+- [ ] System: Change Wallpaper.
+- [ ] System: Develop an installation script so the rice will not depend on GNU Stow anymore.
+- [ ] Repo: Maintain cleanliness and structure.
+- [ ] Repo: Update and improve README and Documentations
