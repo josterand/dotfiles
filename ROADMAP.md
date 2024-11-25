@@ -5,7 +5,7 @@
 - [ ] Rofi: Separate configuration for each launcher script.
 - [ ] Dunst: Fix color scheme to match the rest of the system
 - [ ] Dunst: Fix font to match the rest of the system.
-- [ ] SXHKD: Code refactoring and new keybindings.
+- [X] SXHKD: Code refactoring and new keybindings.
 - [ ] System: Change Wallpaper.
 - [ ] System: Develop an installation script so the rice will not depend on GNU Stow anymore.
 - [ ] Repo: Maintain cleanliness and structure.
