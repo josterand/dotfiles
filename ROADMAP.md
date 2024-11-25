@@ -1,6 +1,6 @@
 - [ ] Polybar: Drop 'JetBrains Mono' for 'Inter' Font.
-- [ ] Polybar: Pacman update module.
-- [ ] Polybar: Brightness control module.
+- [X] Polybar: Pacman update module.
+- [X] Polybar: Brightness control module.
 - [ ] Rofi: Drop 'JetBrains Mono' for 'Inter' Font.
 - [ ] Rofi: Separate configuration for each launcher script.
 - [ ] Dunst: Fix color scheme to match the rest of the system
