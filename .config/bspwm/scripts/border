@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# ***************************************************
+# Author: Franklin Gabriel Guerra (AlphaTechnolog)
+# Github: https://github.com/AlphaTechnolog
+#
+# Modified by: Jonathan Steve Roland (josterand)
+# Github: https://github.com/josterand
+#
+# This project is licensed under the MIT License.
+# Copyright (c) 2024 Jonathan Steve Roland (josterand).
+# For detailed terms and conditions, please refer to
+# the LICENSE file included with this project.
+# ***************************************************
+
+# This script brings support for dual borders (for aesthetic purposes)
+# Depends on `chwb2` from `wmutils/opt` package. Install with `$ yay -S wmutils-git`
+
+outer='0x101010' # Outer color
+inner1='0x0554F2' # Focused color
+inner2='0x011C40' # Normal color
+
+trap 'bspc config border_width 0; kill -9 -$$' INT TERM
+
+targets() {
+ 	case $1 in
+		focused) bspc query -N -n .local.focused.\!fullscreen;;
+		normal)  bspc query -N -n .local.\!focused.\!fullscreen
+	esac | grep -iv "$v"
+}
+
+get_hex () {
+  local originalHex=$1
+  echo $originalHex | sed 's/0x/#/g'
+}
+
+bspc config border_width 18
+bspc config normal_border_color "$(get_hex $outer)"
+bspc config focused_border_color "$(get_hex $outer)"
+
+draw() { chwb2 -I "$inner" -O "$outer" -i "4" -o "9" $* |:; }
+
+# Initial draw, and then subscribe to events
+{ echo; bspc subscribe node_geometry node_focus; } |
+ 	while read -r _; do
+		[ "$v" ] || v='abcdefg'
+		inner=$inner1 draw "$(targets focused)"
+		inner=$inner2 draw "$(targets normal)"
+    done
