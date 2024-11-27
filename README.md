@@ -31,21 +31,15 @@
     <summary><h2>Installation</h2></summary>
     <p>This Rice is designed to be easily installed without modifying your system. We’ll use <code>GNU Stow</code> for installation. Follow the steps below in your terminal.</p>
     <p>Ensure you clone this repository in your root <code>$HOME</code> directory.</p>
-
     <pre><code>cd $HOME</code></pre>
-
     <p>Clone this repository into <code>$HOME</code>:</p>
-
     <pre><code>git clone https://github.com/josterand/dotfiles.git</code></pre>
-
     <p>Stow the configurations!</p>
-
     <pre><code>cd dotfiles
 stow .</code></pre>
-
     <p>The dotfiles are now installed! However, you’ll need to install some additional dependencies on your machine. Follow and run these commands in your terminal:</p>
-
-    <pre><code>cd ~/dotfiles
+    <pre><code>
+cd ~/dotfiles
 grep -vE '^\s*#|^\s*$' pkglist.txt > pkglist_clean.txt
 sudo pacman -S --needed - < pkglist_clean.txt
 rm -r pkglist_clean.txt</code></pre>
