@@ -40,7 +40,7 @@ super + r
 # ********************************
 # Quit BSPWM
 # For emergency use only (in case the powermenu does not appear when pressed)
-super + shift + q
+super + ctrl + shift + q
 	bspc quit
 
 # Restart BSPWM
@@ -53,7 +53,7 @@ super + shift + w
 
 # Kill a focused app instance
 # [ WARNING ]
-# This will kill an app no matter how many that app opened and in which workspace.
+# This will kill an app no matter how many that app opened and in which workspace
 # That app will all be killed.
 super + shift + k
     bspc node -k
