@@ -38,15 +38,12 @@
     <pre><code>cd dotfiles
 stow .</code></pre>
     <p>The dotfiles are now installed! However, you’ll need to install some additional dependencies on your machine. Follow and run these commands in your terminal:</p>
-    <pre><code>
-cd ~/dotfiles
+    <pre><code>cd ~/dotfiles
 grep -vE '^\s*#|^\s*$' pkglist.txt > pkglist_clean.txt
 sudo pacman -S --needed - < pkglist_clean.txt
 rm -r pkglist_clean.txt</code></pre>
-
     <details>
-        <summary>Explanation:</summary>
-        <h3>Brief Explanation</h3>
+        <summary><h3>Command Explanation:</h3></summary>
         <ul>
             <li><strong>cd ~/dotfiles</strong>: Switch to the <code>dotfiles</code> folder.</li>
             <li><strong>grep -vE</strong>: Remove comments and blank lines from <code>pkglist.txt</code>, saving it to <code>pkglist_clean.txt</code>.</li>
