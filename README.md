@@ -1,11 +1,11 @@
 <div align="center">
-    <h1>Josterand's BSPWM Dotfiles</h1>
-    <img src="https://img.shields.io/github/repo-size/josterand/dotfiles?color=E8E8E4&labelColor=513663&style=for-the-badge">
-    <img src="https://img.shields.io/badge/bspwm-E8E8E4?&logo=bspwm&labelColor=513663&logoColor=E8E8E4&style=for-the-badge">
-    <br>
-    <p>
-        Overview || Philosophy || System || Installation
-    </p>
+    <h1>Josterand's bspwm Dotfiles</h1>
+    <table>
+        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#overview">Overview</a></th>
+        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#overview">Philosophy</a></th>
+        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#overview">System</a></th>
+        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#installation">Installation</a></th>
+    </table>
 </div>
 
 <h2>Overview</h2>
