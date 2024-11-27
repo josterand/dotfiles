@@ -2,6 +2,7 @@
     <h1>Josterand's BSPWM Dotfiles</h1>
     <img src="https://img.shields.io/github/repo-size/josterand/dotfiles?color=E8E8E4&labelColor=513663&style=for-the-badge">
     <img src="https://img.shields.io/badge/bspwm-E8E8E4?&logo=bspwm&labelColor=513663&logoColor=E8E8E4&style=for-the-badge">
+    <br>
     <p>
         Overview || Philosophy || System || Installation
     </p>
@@ -13,12 +14,12 @@
 <p>
     This is a Rice I built from scratch, specifically designed to work with the <strong>BSPWM</strong> Window Manager. It embodies a philosophy of minimalist yet functional design, allowing users to focus on the essential tasks at hand.
 </p>
-
 <p>
     This Rice features a minimalist <em>single-bar</em> setup that includes key infotainment elements users might need. It’s my flagship Rice that I’ll continue to use. As long as I stick with BSPWM, refinements, updates, new functionalities, and improvements will keep coming!
 </p>
 
 <h2>System</h2>
+<img src="https://github.com/josterand/test-1/blob/main/laptop.png" align="right" width="400px"/>
 <ul>
     <li><strong>Operating System</strong>: EndeavourOS (Arch-based distro, BTW)</li>
     <li><strong>Window Manager</strong>: BSPWM (<em>with SXHKD keybind daemon</em>)</li>
@@ -51,6 +52,6 @@ rm -r pkglist_clean.txt</code></pre>
             <li><strong>rm pkglist_clean.txt</strong>: Delete the temporary <code>pkglist_clean.txt</code> file.</li>
         </ul>
     </details>
+<p>You can now log out of your current DE or WM and log back into BSPWM.</p>
 </details>
 
-<p>You can now log out of your current DE or WM and log back into BSPWM.</p>
