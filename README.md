@@ -19,7 +19,6 @@
 </p>
 
 <h2>System</h2>
-<img src="https://github.com/josterand/test-1/blob/main/laptop.png" align="right" width="400px"/>
 <ul>
     <li><strong>Operating System</strong>: EndeavourOS (Arch-based distro, BTW)</li>
     <li><strong>Window Manager</strong>: BSPWM (<em>with SXHKD keybind daemon</em>)</li>
