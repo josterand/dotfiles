@@ -1,11 +1,11 @@
 <div align="center">
     <h1>Josterand's bspwm Dotfiles</h1>
     <table>
-        <th><a href="README.md#Overview">Overview</a></th>
-        <th><a href="README.md#Philosophy">Philosophy</a></th>
-        <th><a href="README.md#System">System</a></th>
-        <th><a href="README.md#Installation">Installation</a></th>
-        <th><a href="README.md#Credits">Credits</a></th>
+        <th><a href="#overview">Overview</a></th>
+        <th><a href="#philosophy">Philosophy</a></th>
+        <th><a href="#system">System</a></th>
+        <th><a href="#installation">Installation</a></th>
+        <th><a href="#credits">Credits</a></th>
     </table>
 </div>
 
