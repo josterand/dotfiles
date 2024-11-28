@@ -1,10 +1,10 @@
 <div align="center">
     <h1>Josterand's bspwm Dotfiles</h1>
     <table>
-        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#overview">Overview</a></th>
-        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#overview">Philosophy</a></th>
-        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#overview">System</a></th>
-        <th><a href="https://github.com/josterand/dotfiles/tree/v2?tab=readme-ov-file#installation">Installation</a></th>
+        <th><a href="./README.md#Overview">Overview</a></th>
+        <th><a href="./README.md#Philosophy">Philosophy</a></th>
+        <th><a href="./README.md#System">System</a></th>
+        <th><a href="./README.md#Installation">Installation</a></th>
     </table>
 </div>
 
