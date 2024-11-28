@@ -10,4 +10,4 @@
 - [ ] System: Develop an installation script so the rice will not depend on GNU Stow anymore.
 - [ ] System: Update color scheme to a darker and lowed contrast
 - [ ] Repo: Maintain cleanliness and structure.
-- [ ] Repo: Update and improve README and Documentations
+- [X] Repo: Update and improve README and Documentations
