@@ -16,9 +16,9 @@
 # This script brings support for dual borders (for aesthetic purposes)
 # Depends on `chwb2` from `wmutils/opt` package. Install with `$ yay -S wmutils-git`
 
-outer='0x101010' # Outer color
-inner1='0x0554F2' # Focused color
-inner2='0x011C40' # Normal color
+outer='0x141b1e' # Outer color
+inner1='0x232a2d' # Focused color
+inner2='0x141b1e' # Normal color
 
 trap 'bspc config border_width 0; kill -9 -$$' INT TERM
 
