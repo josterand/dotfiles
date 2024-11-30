@@ -16,12 +16,12 @@ configuration {
 }
 
 * {
-    background0:     #212121;
-    background1:     #2C2C2C;
-    foreground0:     #E0E0E0;
+    background0:     #141b1e;
+    background1:     #232a2d;
+    foreground0:     #dadada;
 
-    accent-color:     #E0E0E0;
-    urgent-color:     #E57373;
+    accent-color:     #dadada;
+    urgent-color:     #e57474;
 
     background-color:   transparent;
     text-color:         @foreground0;
