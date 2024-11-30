@@ -32,7 +32,7 @@ fi
 # Show update status on the bar
 updates=$((arch_updates + aur_updates))
 if [ "$updates" -gt 0 ]; then
-    echo "%{T3}  %{T2}$updates Updates!"
+    echo "%{T3}  %{T2}$updates Updates!"
 else
-    echo "%{T3}  %{T2}Updated"
+    echo "%{T3}  %{T2}Updated"
 fi
