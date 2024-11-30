@@ -15,6 +15,10 @@ transparent_background_colors = false
 background  =   "#141b1e"
 foreground  =   "#dadada"
 
+[colors.cursor]
+text = "#dadada"
+cursor = "#dadada"
+
 [colors.normal]
 black   =   "#141b1e"
 red     =   "#e57474"
