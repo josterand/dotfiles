@@ -13,4 +13,5 @@
 /README.md
 /LICENSE
 /ROADMAP.md
-/packages.txt
+/setup.sh
+/test.sh
