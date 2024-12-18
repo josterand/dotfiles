@@ -11,19 +11,18 @@
 # ***************************************************
 
 # Required variables
-user=$(whoami)
 rice_name="dotfiles"
-rice_dir="~/${rice_name}"
-backup_dir="~/Backup/${user}'s Rice"
-dependencies=()
-
-log "Rice directory: $rice_dir" "normal"
-sleep 1
-
-for configs in "$rice_dir/.config"/*/; do
-        [ -d "$configs" ] && subfolders+=("$(basename "$configs")")
-        log "$configs configuration detected!" "normal"
-    done
+rice_dir="$HOME/${rice_name}"
+date=$(date "+%Y%m%d-%H%M%S")
+backup_dir="$HOME/Backups/Bspwm/$(whoami)/Backup-${date}"
+dependencies=(
+    "alacritty"
+    "bspwm"
+    "dunst"
+    "sxhkd"
+    "polybar"
+    "rofi"
+)
 
 log() {
     local txt="$1"
@@ -55,43 +54,44 @@ log() {
 
 # Check if dependencies are installed
 pkg_check() {
-    log "Checking dependencies" "normal"
+    log "Checking dependencies" "info"
     for dep in "${dependencies[@]}"; do
         if ! command -v "$dep" &>/dev/null; then
             log "Error: package $dep not found. Please install it first!" "error"
             exit 1
         fi
         log "$dep is already installed. Good..." "normal"
-        sleep 1
     done
     log "All dependencies are installed!" "success"
 }
 
-# Check if folder exists
 rice_backup() {
-    log "Backing up configuration files" "normal"
-    mkdir $backup_dir
+    log "Backing up configuration files" "info"
+    mkdir -p $backup_dir
     for pkg in "${dependencies[@]}"; do
-        if [ ! -d "~/.config/${pkg}" ]; then
+        if [ ! -d "$HOME/.config/${pkg}" ]; then
             log "$pkg configuration not exist" "normal"
         else
             log "$pkg configuration exist. Backing up the configuration" "normal"
-            mv ~/.config/${pkg} $backup_dir
+            mv $HOME/.config/${pkg} $backup_dir
         fi
     done
 }
 
 # Function to copy dotfiles
 rice_setup() {
-    log "installing the rice..." "normal"
-    log "detecting configuration folders" "normal"
+    log "Installing the rice..." "info"
+    log "Detecting configuration folders" "info"
     subfolders=()
+    for subfolder in "$rice_dir/.config"/*/; do
+        [ -d "$subfolder" ] && subfolders+=("$(basename "$subfolder")")
+        log "$subfolder configuration detected!" "normal"
+    done
 
     for folder in "${subfolders[@]}"; do
         log "Copying $folder configurations..." "normal"
-        cp "$rice_dir/.config/${folder}" "~/.config/"
+        cp -r "$rice_dir/.config/${folder}" "$HOME/.config/"
     done
-    log "Rice installation" "success"
 }
 
 # ==============
@@ -99,7 +99,7 @@ rice_setup() {
 # ==============
 while true; do
     clear
-    log "The installation process is about to begin. Do you want to continue? (Y/n)" "info"
+    log "The installation process is about to begin. Do you want to continue? (Y/n)" "normal"
     read -p "> " -n 1 -r
     echo
 
@@ -108,7 +108,6 @@ while true; do
     case $response in
     [Yy])
         # If the user inputs Y or y
-        log "Backing up your previous configurations..." "normal"
         pkg_check
         rice_backup
         rice_setup
