@@ -21,19 +21,34 @@ super + f
 
 # Appmenu
 super + @space
-	bash ~/.bin/appmenu
+	/bin/sh ~/.bin/appmenu
 
 # Powermenu
 super + Escape
-	bash ~/.bin/powermenu
+	/bin/sh ~/.bin/powermenu
 
 # Wifimenu
 super + w
-	bash ~/.bin/wifimenu
+	/bin/sh ~/.bin/wifimenu
 
 # Reload SXHKD configuration
 super + r
 	pkill -USR1 -x sxhkd
+
+# ******************
+# Keyboard buttons
+# ******************
+# Menaikkan volume
+XF86AudioRaiseVolume
+    pactl set-sink-volume 0 +2%
+
+# Menurunkan volume
+XF86AudioLowerVolume
+    pactl set-sink-volume 0 -2%
+
+# Membisukan atau mengaktifkan suara
+XF86AudioMute
+    pactl set-sink-mute 0 toggle
 
 # *****************
 # BSPWM Management
