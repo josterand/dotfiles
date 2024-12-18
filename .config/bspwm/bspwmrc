@@ -29,8 +29,7 @@ xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Show wallpaper
-#feh -g 1440x900 --bg-fill ~/.wallpapers/wallpaper.jpg &
-nitrogen --restore &
+feh -g 1440x900 --bg-fill ~/Pictures/Wallpapers/rice_wallpaper.jpg &
 
 # Activate the panel
 ~/.config/polybar/launch.sh &
