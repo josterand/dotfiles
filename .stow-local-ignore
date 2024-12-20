@@ -5,16 +5,13 @@
 /.editorconfig
 /.gitignore
 
-# Temporary files and folders
-/tmp
-/tmp.txt
-
 # Files
-/README.md
 /LICENSE
+/README.md
 /ROADMAP.md
 /INSTALL.md
 /install.sh
 /test.sh
+
 # Others
 /docs
