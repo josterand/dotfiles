@@ -1,73 +1,73 @@
-# Instalasi
-Rice ini didesain untuk dapat diinstall dengan mudah. Aku mendesain struktur foldernya agar dapat diinstall dengan berbagai cara, cara mulus menggunakan `GNU Stow`, cara otomatis menggunakan skrip installasi yang sudah aku sediakan, dan cara manual yang mungkin akan memerlukan sedikit tenaga ekstra.
+# Installation
+This rice is designed to be easily installed. I structured the folders so that it can be installed in various ways: the smooth way using `GNU Stow`, the automatic way using the provided installation script, and the manual way which might require a bit more effort.
 
-## Langkah-langkah
-1. Hal pertama yang kamu perlu lakukan terlepas dari cara apapun yang kamu gunakan adalah pastikan kamu meng-klon repo ini di folder `$HOME` kamu. Jangan ditempat lain.
+## Steps
+1. The first thing you need to do regardless of the method you choose is to make sure you clone this repo into your `$HOME` folder. Not anywhere else.
 ```bash
 cd $HOME
 git clone https://github.com/josterand/dotfiles.git
 ```
 
-2. Langkah berikutnya, silahkan pilih salah satu diantara cara-cara dibawah ini:
+2. Next, please choose one of the methods below:
 <details>
-<summary><b>Cara mulus: `GNU Stow` (Direkomendasikan)</b></summary>
+<summary><b>Smooth way: `GNU Stow` (Recommended)</b></summary>
 
-Kamu hanya perlu menginstall `GNU Stow` di mesinmu terlebih dahulu. `GNU Stow` adalah alat manajemen symlink yang memungkinkan kamu mengelola paket perangkat lunak atau data yang terpisah dalam direktori terpisah, dan membuatnya tampak seolah-olah terinstal dalam satu pohon direktori tunggal.
+You just need to install `GNU Stow` on your machine first. `GNU Stow` is a symlink management tool that allows you to manage separate software packages or data in separate directories, and make them appear as if they are installed in a single directory tree.
 
-**Sistem berbasis Debian / Ubuntu / Linux Mint**
+**Debian / Ubuntu / Linux Mint based systems**
 ```bash
 sudo apt install stow
 ```
 
-**Sistem berbasis Arch**
+**Arch based systems**
 ```bash
 sudo pacman -S stow
 ```
 
-**Sistem berbasis Red Hat (Fedora)**
+**Red Hat based systems (Fedora)**
 ```bash
 sudo dnf install stow
 ```
 
-Setelah menginstall `GNU Stow`, maka kamu tinggal "stow" kedalam folder dotfiles kamu. Dan kamu akan melihat bahwa folder dotfiles itu akan terinstall dalam bentuk symlink di sistem kamu.
+After installing `GNU Stow`, you just need to "stow" into your dotfiles folder. You will see that the dotfiles folder will be installed as symlinks in your system.
 ```bash
 stow $HOME/dotfiles
 ```
 
-Untuk menghapus symlink yang telah dibuat, cukup jalankan perintah
+To remove the created symlinks, simply run the command
 ```bash
 stow -D $HOME/dotfiles
 ```
 </details>
 
 <details>
-<summary><b>Cara otomatis: Skrip Instalasi</b></summary>
+<summary><b>Automatic way: Installation Script</b></summary>
 
-Aku sudah menyiapkan skrip instalasi yang akan secara otomatis meng-copy file dan folder konfigurasi dari repo ini ke dalam sistem kamu. Caranya hanya tinggal menjalankan perintah dibawah ini
+I have prepared an installation script that will automatically copy the configuration files and folders from this repo into your system. Just run the command below
 
-**Berikan izin kepada skrip agar skrip dapat berjalan**
+**Give permission to the script so it can run**
 ```bash
 chmod +x $HOME/dotfiles/install.sh
 $HOME/dotfiles/install.sh
 ```
 
-Itu saja, file-file akan ter-copy ke dalam sistem kamu.
+That's it, the files will be copied into your system.
 </details>
 
 <details>
-<summary><b>Cara manual: Gunakan Terminal</b></summary>
+<summary><b>Manual way: Use Terminal</b></summary>
 
-Jika kamu adalah seorang paranoid yang tidak percaya skrip apapun dari internet, ini adalah cara yang cocok untuk kamu. Cara ini pada dasarnya adalah meng-copy file-file yang ada didalam repo ini secara manual. Semua langkah-langkah ini sebenarnya sudah terotomatisasi oleh skrip instalasi yang sudah saya siapkan.
+If you are paranoid and don't trust any scripts from the internet, this is the way for you. This method basically involves manually copying the files from this repo. All these steps are actually automated by the installation script I have prepared.
 
-**Copy semua isi folder konfigurasi**
+**Copy all contents of the configuration folder**
 ```bash
 cp -r $HOME/dotfiles/.config/* $HOME/.config/
 ```
 
-**Copy folder bin dan font yang ada di `.local`**
+**Copy the bin and font folders in `.local`**
 ```bash
 cp -r $HOME/dotfiles/.local/* $HOME/.local/
 ```
 </details>
 
-3. Setelah menginstall, kamu bisa logout dari DE atau WM kamu, dan kemudian login kembali. Selamat menikmati rice ini!
+3. After installing, you can log out of your DE or WM, and then log back in. Enjoy this rice!
