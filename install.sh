@@ -34,9 +34,6 @@ log() {
     warning)
         echo -e "${bold}\033[33m:: ${txt}${reset}" # Yellow
         ;;
-    info)
-        echo -e "${bold}\033[34m:: ${txt}${reset}" # Blue
-        ;;
     success)
         echo -e "${bold}\033[32m:: ${txt}${reset}" # Green
         ;;
@@ -62,7 +59,7 @@ rice_setup() {
     done
     sleep 1
 
-    log "Copying configuration files..." "info"
+    log "Copying configuration files..." "warning"
     # Copy configuration files
     for folder_name in "${subfolders[@]}"; do
         capitalized_folder_name="$(echo "$folder_name" | sed 's/.*/\u&/')"
@@ -92,7 +89,7 @@ while true; do
     case $response in
     [Yy])
         # Create necessary directories
-        log "Creating necessary directories..." "info"
+        log "Creating necessary directories..." "warning"
         log "Creating font folder..." "normal"
         mkdir -p "$HOME/.local/share/fonts"
         sleep 1
@@ -101,7 +98,7 @@ while true; do
         mkdir -p "$HOME/.local/bin"
         sleep 1
 
-        log "Setting up rice..." "info"
+        log "Setting up rice..." "warning"
         rice_setup
         sleep 1
 
