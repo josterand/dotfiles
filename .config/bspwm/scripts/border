@@ -13,12 +13,13 @@
 # the LICENSE file included with this project.
 # ***************************************************
 
-# This script brings support for dual borders (for aesthetic purposes)
-# Depends on `chwb2` from `wmutils/opt` package. Install with `$ yay -S wmutils-git`
+# This script brings support for dual borders (for aesthetic purposes).
+# This functionality depends on `chwb2` from `wmutils/opt` package. Install with `$ yay -S wmutils-git`
+# or just build it from source
 
-outer='0x141b1e' # Outer color
-inner1='0xA67C7C' # Focused color
-inner2='0x141b1e' # Normal color
+outer='0x121212' # Outer color
+inner1='0x232323' # Focused color
+inner2='0x121212' # Normal color
 
 trap 'bspc config border_width 0; kill -9 -$$' INT TERM
 
