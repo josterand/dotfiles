@@ -21,15 +21,15 @@ super + f
 
 # Appmenu
 super + @space
-	/bin/sh ~/.bin/appmenu
+	/bin/sh $HOME/.local/bin/appmenu
 
 # Powermenu
 super + Escape
-	/bin/sh ~/.bin/powermenu
+	/bin/sh $HOME/.local/bin/powermenu
 
 # Wifimenu
 super + w
-	/bin/sh ~/.bin/wifimenu
+	/bin/sh $HOME/.local/bin/wifimenu
 
 # Reload SXHKD configuration
 super + r
