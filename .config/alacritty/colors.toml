@@ -12,19 +12,19 @@
 transparent_background_colors = false
 
 [colors.primary]
-background  =   "#141b1e"
-foreground  =   "#dadada"
+background  =   "#121212"
+foreground  =   "#FFFFFF"
 
 [colors.cursor]
-text = "#dadada"
-cursor = "#dadada"
+text = "#FFFFFF"
+cursor = "#FFFFFF"
 
 [colors.normal]
-black   =   "#141b1e"
-red     =   "#e57474"
-green   =   "#8ccf7e"
-yellow  =   "#e5c76b"
-blue    =   "#67b0e8"
-magenta =   "#c47fd5"
-cyan    =   "#6cbfbf"
-white   =   "#dadada"
+black   =   "#121212"
+red     =   "#DB4437"
+green   =   "#0F9D58"
+yellow  =   "#F4B400"
+blue    =   "#4285F4"
+magenta =   "#bb86fc"
+cyan    =   "#03dac6"
+white   =   "#FFFFFF"
