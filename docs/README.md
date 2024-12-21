@@ -12,9 +12,9 @@
 ## Overview
 
 ## Philosophy
-This is a Rice I built from scratch, specifically designed to work with the **BSPWM** Window Manager. It embodies a philosophy of minimalist yet functional design, allowing users to focus on the essential tasks at hand.
+This is a rice I built from scratch, specifically designed to work with the **bspwm** Window Manager. It embodies a philosophy of minimalistic yet functional design, allowing users to focus on essential tasks.
 
-This Rice features a minimalist *single-bar* setup that includes key infotainment elements users might need. It’s my flagship Rice that I’ll continue to use. As long as I stick with **BSPWM**, refinements, updates, new functionalities, and improvements will keep coming!
+This rice features a minimalist *single-bar* setup that includes key infotainment elements users might need. It’s my flagship rice that I plan to continue using. As long as I stick with **bspwm**, refinements, updates, new functionalities, and improvements will keep coming!
 
 ## System
 - **Operating System**: Linux Mint
@@ -24,7 +24,7 @@ This Rice features a minimalist *single-bar* setup that includes key infotainmen
 - **Launcher**: Rofi
 
 ## Installation
-For installation instructions, please go to the [Installation Instructions](INSTALL.md)
+For installation instructions, please refer to the [Installation Instructions](INSTALL.md).
 
 ## Credits
-I'll add the credits later.
+Credits will be added later.
