@@ -12,10 +12,7 @@
 monitor = 0
 follow = mouse
 geometry = "300x5-30+20"
-# width = 111
-# height = 222
 origin = bottom-right
-# offset = (15, 55)
 scale = 0
 notification_limit = 0
 progress_bar = true
@@ -52,18 +49,18 @@ max_icon_size = 80
 [urgency_low]
 background = "#101419"
 foreground = "#FEFEFE"
-highlight  = "#FEFEFE"
+highlight = "#FEFEFE"
 timeout = 10
 
 [urgency_normal]
 background = "#101419"
 foreground = "#FEFEFE"
-highlight  = "#FEFEFE"
+highlight = "#FEFEFE"
 highlight-background = "#232429"
 timeout = 10
 
 [urgency_critical]
 background = "#101419"
 foreground = "#FEFEFE"
-highlight  = "#FEFEFE"
+highlight = "#FEFEFE"
 timeout = 10
