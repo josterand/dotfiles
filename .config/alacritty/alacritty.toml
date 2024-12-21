@@ -18,23 +18,29 @@ import = [
 live_config_reload = true
 
 [cursor]
+# Cursor blink interval in milliseconds
 blink_interval = 350
 
 [cursor.style]
+# Cursor shape and blinking behavior
 shape = "Block"
 blinking = "Always"
 
 [scrolling]
+# Scrollback history and speed multiplier
 history = 10000
 multiplier = 3
 
 [selection]
+# Save selected text to clipboard
 save_to_clipboard = true
 
 [env]
+# Terminal type
 TERM = "xterm-256color"
 
 [window]
+# Window appearance and behavior
 startup_mode = "Windowed"
 decorations = "None"
 decorations_theme_variant = "None"
@@ -43,6 +49,6 @@ opacity = 1.0
 blur = false
 
 [window.padding]
+# Window padding in pixels
 x = 20
 y = 20
-

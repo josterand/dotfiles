@@ -13,17 +13,18 @@ size = 8
 ## Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
 builtin_box_drawing = true
 
+## Font family settings for different styles
 [font.normal]
-family  = "JetBrains Mono"
+family = "JetBrains Mono"
 
 [font.italic]
-family  = "JetBrains Mono"
+family = "JetBrains Mono"
 
 [font.bold]
-family  = "JetBrains Mono"
+family = "JetBrains Mono"
 
 [font.bold_italic]
-family  = "JetBrains Mono"
+family = "JetBrains Mono"
 
 [font.offset]
 ## Extra space around each character.
