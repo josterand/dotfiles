@@ -15,35 +15,53 @@
 
 # This script brings support for dual borders (for aesthetic purposes).
 # This functionality depends on `chwb2` from `wmutils/opt` package. Install with `$ yay -S wmutils-git`
-# or just build it from source
+# or just build it from source.
 
-outer='0x121212' # Outer color
-inner1='0x232323' # Focused color
-inner2='0x121212' # Normal color
+# Variables for border colors
+outer='0x121212'  # Outer color for the borders
+inner1='0x232323' # Color for the focused border
+inner2='0x121212' # Color for the normal (unfocused) border
 
+# Trap the INT (Ctrl+C) and TERM signals to reset the border width and kill the script
 trap 'bspc config border_width 0; kill -9 -$$' INT TERM
 
+# Function to get the target windows (focused or normal)
+# This function returns the list of windows based on their focus status
 targets() {
- 	case $1 in
-		focused) bspc query -N -n .local.focused.\!fullscreen;;
-		normal)  bspc query -N -n .local.\!focused.\!fullscreen
-	esac | grep -iv "$v"
+  case $1 in
+    focused)
+      # Query focused windows that are not fullscreen
+      bspc query -N -n .local.focused.\!fullscreen ;;
+    normal)
+      # Query normal windows (not focused and not fullscreen)
+      bspc query -N -n .local.\!focused.\!fullscreen ;;
+  esac | grep -iv "$v"  # Exclude the variable 'v' from the output
 }
 
-get_hex () {
+# Function to convert the hex color code from the '0x' format to the '#' format
+# This ensures compatibility with bspc config which expects hex color codes with '#' prefix
+get_hex() {
   local originalHex=$1
-  echo $originalHex | sed 's/0x/#/g'
+  echo "$originalHex" | sed 's/0x/#/g'
 }
 
+# Initial setup for bspc to set border width and colors
 bspc config border_width 18
-bspc config normal_border_color "$(get_hex $outer)"
-bspc config focused_border_color "$(get_hex $outer)"
+bspc config normal_border_color "$(get_hex "$outer")"
+bspc config focused_border_color "$(get_hex "$outer")"
 
-draw() { chwb2 -I "$inner" -O "$outer" -i "4" -o "9" $* |:; }
+# Function to apply dual border effect using 'chwb2' tool
+draw() {
+  chwb2 -I "$inner" -O "$outer" -i "4" -o "9" "$@" | :;
+}
 
+# Subscribes to bspc events related to node geometry and focus changes
 { echo; bspc subscribe node_geometry node_focus; } |
- 	while read -r _; do
-		[ "$v" ] || v='abcdefg'
-		inner=$inner1 draw "$(targets focused)"
-		inner=$inner2 draw "$(targets normal)"
-    done
+  while read -r _; do
+    # Ensure that the 'v' variable is initialized to a default value
+    [ "$v" ] || v='abcdefg'
+
+    # Apply the focused and normal border colors using the draw function
+    inner=$inner1 draw "$(targets focused)"
+    inner=$inner2 draw "$(targets normal)"
+  done
