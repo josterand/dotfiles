@@ -12,22 +12,25 @@
 
 # This module depends on the `pacman-contrib` (extra) package.
 
+# Function to check updates and return count
+check_updates() {
+    local updates
+    updates=$(eval "$1" 2> /dev/null | wc -l)
+    echo "${updates:-0}"
+}
+
 # Check Pacman updates
-if ! arch_updates=$(checkupdates 2> /dev/null | wc -l ); then
-    arch_updates=0
-fi
+arch_updates=$(check_updates "checkupdates")
 
 # Check for AUR helper updates
 # If you are using an AUR helper other than yay,
 # please use one of these lines of code by uncommenting them.
-if ! aur_updates=$(yay -Qum 2> /dev/null | wc -l); then
-## if ! aur_updates=$(paru -Qum 2> /dev/null | wc -l); then
-## if ! aur_updates=$(cower -u 2> /dev/null | wc -l); then
-## if ! aur_updates=$(trizen -Su --aur --quiet | wc -l); then
-## if ! aur_updates=$(pikaur -Qua 2> /dev/null | wc -l); then
-## if ! aur_updates=$(rua upgrade --printonly 2> /dev/null | wc -l); then
-    aur_updates=0
-fi
+aur_updates=$(check_updates "yay -Qum")
+## aur_updates=$(check_updates "paru -Qum")
+## aur_updates=$(check_updates "cower -u")
+## aur_updates=$(check_updates "trizen -Su --aur --quiet")
+## aur_updates=$(check_updates "pikaur -Qua")
+## aur_updates=$(check_updates "rua upgrade --printonly")
 
 # Show update status on the bar
 updates=$((arch_updates + aur_updates))
