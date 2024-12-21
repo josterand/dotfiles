@@ -1,6 +1,6 @@
 ## Pending Tasks
 
-### Polybar
+### Rofi
 
 - [ ] **Rofi:** Replace 'JetBrains Mono' with 'Inter' font.
 - [ ] **Rofi:** Create separate configurations for each launcher script.
