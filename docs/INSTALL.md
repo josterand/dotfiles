@@ -1,13 +1,15 @@
 # Installation
+
 This rice is designed to be easily installed. The folders are structured to allow various installation methods: the smooth way using `GNU Stow`, the automatic way using the provided installation script, and the manual way, which might require a bit more effort.
 
 ## Steps
+
 1. First, regardless of the method you choose, clone this repository into your `$HOME` folder. Do not clone it elsewhere.
 
-   ```bash
-   cd $HOME
-   git clone https://github.com/josterand/dotfiles.git
-   ```
+    ```bash
+    cd $HOME
+    git clone https://github.com/josterand/dotfiles.git
+    ```
 
 2. Next, choose one of the methods below:
 
