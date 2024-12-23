@@ -10,6 +10,7 @@
 # the LICENSE file included with this project.
 # ***************************************************
 
+# This module check for pacman package updates and AUR package updates.
 # This module depends on the `pacman-contrib` (extra) package.
 
 # Function to check updates and return count
