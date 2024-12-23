@@ -1,6 +1,5 @@
 # Development environment configurations
 .vscode/*
-.editorconfig
 
 # Auto-generated files and junks
 *.uuid
