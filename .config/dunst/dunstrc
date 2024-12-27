@@ -27,7 +27,7 @@ padding = 15
 horizontal_padding = 15
 text_icon_padding = 0
 frame_width = 0
-frame_color = "#101419"
+frame_color = "#121212"
 separator_color = frame
 sort = yes
 font = Inter 11
@@ -47,20 +47,20 @@ icon_size = 48
 max_icon_size = 80
 
 [urgency_low]
-background = "#101419"
-foreground = "#FEFEFE"
-highlight = "#FEFEFE"
+background = "#121212"
+foreground = "#FFFFFF"
+highlight = "#FFFFFF"
 timeout = 10
 
 [urgency_normal]
-background = "#101419"
-foreground = "#FEFEFE"
-highlight = "#FEFEFE"
+background = "#121212"
+foreground = "#FFFFFF"
+highlight = "#FFFFFF"
 highlight-background = "#232429"
 timeout = 10
 
 [urgency_critical]
-background = "#101419"
-foreground = "#FEFEFE"
-highlight = "#FEFEFE"
+background = "#121212"
+foreground = "#FFFFFF"
+highlight = "#FFFFFF"
 timeout = 10
