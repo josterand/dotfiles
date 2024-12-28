@@ -1,5 +1,13 @@
 ## Pending Tasks
 
+### EWW (Pending)
+
+> [!NOTE]
+> I want to implement the use of EWW to reduce the dependency on other dependencies such as Polybar and Rofi.
+
+-   [ ] Implement eww to replace Polybar.
+-   [ ] Implement eww to replace Rofi.
+
 ### Rofi
 
 -   [ ] **Rofi:** Replace 'JetBrains Mono' with 'Inter' font.
