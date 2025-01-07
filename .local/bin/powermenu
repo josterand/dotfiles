@@ -14,11 +14,11 @@
 uptime="$(uptime -p | sed -e 's/up //g')"
 
 # Define icons for each action
-shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout='󰈆'
+shutdown='Shutdown'
+reboot='Restart'
+lock='Lock'
+suspend='Sleep'
+logout='Log Out'
 
 # Function to display the Rofi menu and handle user selection
 run_rofi() {
@@ -29,7 +29,7 @@ run_rofi() {
 rofi_cmd() {
     rofi -dmenu \
         -mesg "Uptime: $uptime" \
-        -theme "$HOME/.config/rofi/default.rasi" \
+        -theme "$HOME/.config/rofi/appmenu/appmenu.rasi" \
         -theme-str 'mainbox {children: [ "message", "listview" ];}' \
         -theme-str 'listview {columns: 5; lines: 1;}'
 }

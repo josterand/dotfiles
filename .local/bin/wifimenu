@@ -10,6 +10,16 @@
 # the LICENSE file included with this project.
 # ***************************************************
 
+# Status
+connection_state=$(cat /sys/class/net/wl*/operstate)
+if [ "$connection_state" = "up" ]; then
+    status="Connected to $(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)"
+else
+    status="Disconnected"
+fi
+
+
+
 wifi_list=$(nmcli --fields "SECURITY,SSID" device wifi list | sed 1d | sed 's/  */ /g' | sed -E "s/WPA*.?\S/ /g" | sed "s/^--/ /g" | sed "s/  //g" | sed "/--/d")
 
 connected=$(nmcli -fields WIFI g)
@@ -20,7 +30,7 @@ elif [[ "$connected" =~ "disabled" ]]; then
 fi
 
 # Use rofi to select wifi network
-chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: " -theme $HOME/.config/rofi/default.rasi)
+chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: " -theme $HOME/.config/rofi/appmenu/appmenu.rasi)
 # Get name of connection
 read -r chosen_id <<< "${chosen_network:3}"
 
