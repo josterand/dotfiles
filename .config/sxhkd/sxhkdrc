@@ -21,15 +21,15 @@ super + f
 
 # Appmenu
 super + @space
-    $HOME/.local/bin/appmenu
+    $HOME/.config/rofi/scripts/themes/appmenu
 
 # Powermenu
 super + Escape
-    $HOME/.local/bin/powermenu
+    $HOME/.config/rofi/scripts/themes/powermenu
 
 # Wifimenu
 super + w
-    $HOME/.local/bin/wifimenu
+    $HOME/.config/rofi/scripts/themes/wifimenu
 
 # Reload SXHKD configuration
 super + r
