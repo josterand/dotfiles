@@ -10,6 +10,10 @@
 # the LICENSE file included with this project.
 # ***************************************************
 
+# ====================================================================================
+# WARNING! DUE TO THE CHANGES TO THE REPO STRUCTURE, THIS SCRIPT IS CURRENTLY UNUSABLE
+# ====================================================================================
+
 # Required variables
 title="=================================\nBSPWM rice Installer by Josterand\n================================="
 subtitle="
