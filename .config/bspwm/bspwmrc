@@ -32,7 +32,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 feh -g 1440x900 --bg-fill ~/Pictures/Wallpapers/wallpaper-mountain.jpg &
 
 # Activate the panel
-~/.config/polybar/launch.sh &
+~/.config/polybar/scripts/launch.sh &
 
 # Activate the notification daemon
 dunst --config ~/.config/dunst/dunstrc &
