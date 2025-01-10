@@ -10,4 +10,4 @@
 # the LICENSE file included with this project.
 # ***************************************************
 
-rofi -show drun -cycle false -theme ~/.config/rofi/appmenu/appmenu.rasi
+rofi -show drun -cycle false -theme ~/.config/rofi/themes/appmenu/appmenu.rasi

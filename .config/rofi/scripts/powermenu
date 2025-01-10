@@ -29,7 +29,7 @@ run_rofi() {
 rofi_cmd() {
     rofi -dmenu \
         -mesg "Uptime: $uptime" \
-        -theme "$HOME/.config/rofi/appmenu/appmenu.rasi" \
+        -theme "$HOME/.config/rofi/themes/appmenu/appmenu.rasi" \
         -theme-str 'mainbox {children: [ "message", "listview" ];}' \
         -theme-str 'listview {columns: 5; lines: 1;}'
 }
