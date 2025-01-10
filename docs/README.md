@@ -37,4 +37,5 @@ For detailed installation instructions, please refer to the [Installation Guide]
 I will add the credits later.
 
 ## What's Next?
+
 As long as I'm still using this rice, it will continue to get updates. For more about the future plan, please see [Project Roadmap](ROADMAP.md)
