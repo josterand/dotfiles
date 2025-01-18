@@ -8,15 +8,15 @@
 </div>
 
 <div align="center">
-    <h3>Repo Information at a Glance</h3>
+    <br>
     <img src="https://img.shields.io/github/repo-size/josterand/dotfiles?color=121212&labelColor=FFFFFF&style=for-the-badge" height="25">
 </div>
 
 ## Overview
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/showcase.png" width=480>
-    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/showcase.png" width=480>
+    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/showcase.png" width=360>
+    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/showcase.png" width=360>
 </div>
 
 ## Philosophy
