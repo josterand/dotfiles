@@ -8,7 +8,6 @@
 </div>
 
 <div align="center">
-    <br>
     <img src="https://img.shields.io/badge/Linux-grey?style=for-the-badge&label=Platform&labelColor=232323&color=1e1e1e">
     <img src="https://img.shields.io/github/license/josterand/dotfiles?style=for-the-badge&label=License&labelColor=232323&color=1e1e1e">
     <img src="https://img.shields.io/github/repo-size/josterand/dotfiles?style=for-the-badge&label=Repo%20Size&labelColor=232323&color=1e1e1e">
