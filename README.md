@@ -27,7 +27,7 @@ This rice setup is custom-designed by me to work seamlessly with the bspwm windo
 Here is a list of recommended packages to use with these dotfiles to ensure everything works smoothly.
 
 > [!TIP]
-> Optional means you can replace it with an application or package of your choice. However, make sure to update the BSPWM configuration accordingly to ensure everything works properly.
+> _Optional means you can replace it with an application or package of your choice. However, make sure to update the BSPWM configuration accordingly to ensure everything works properly._
 
 | Use Case            | Package       | Requirement |
 | ------------------- | ------------- | ----------- |
