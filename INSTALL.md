@@ -51,22 +51,6 @@ stow -D -d $HOME/dotfiles
 </details>
 
 <details>
-<summary><b>Automatic way: Installation Script</b></summary>
-
-An installation script is provided to automatically copy the configuration files and folders from this repository into your system. Run the commands below:
-
-**Give execute permission to the script:**
-
-```bash
-chmod +x $HOME/dotfiles/install.sh
-$HOME/dotfiles/install.sh
-```
-
-The files will be copied into your system.
-
-</details>
-
-<details>
 <summary><b>Manual way: Use Terminal</b></summary>
 
 If you prefer not to trust any scripts from the internet, you can manually copy the files from this repository. The steps below replicate what the installation script does.
