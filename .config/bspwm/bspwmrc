@@ -29,7 +29,8 @@ xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Show wallpaper
-feh -g 1440x900 --bg-fill ~/Pictures/Wallpapers/wallpaper-mountain.jpg &
+# Just change the wallpaper path
+feh -g 1440x900 --bg-fill ~/Pictures/Wallpapers/mountain.jpg &
 
 # Activate the panel
 ~/.config/polybar/scripts/launch.sh &
