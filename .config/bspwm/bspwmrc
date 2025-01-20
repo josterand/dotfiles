@@ -44,7 +44,7 @@ lxpolkit &
 # [ BSPWM CONFIGURATIONS ]
 # Make sure to describe your active connected screen name here
 # Use xrandr command to check currently active connected screen
-bspc monitor -d 1 2 3 4 5
+bspc monitor -d 1 2 3 4 5 6
 
 # - APPEARANCE -
 bspc config window_gap 10
