@@ -1,4 +1,4 @@
-at_pointer           = 0
+at_pointer           = 1
 stay_alive           = 1
 csv_no_dirs          = 0
 tint2_look           = 0
