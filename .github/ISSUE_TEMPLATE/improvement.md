@@ -6,8 +6,8 @@ labels: enhancement
 assignees: ''
 
 ---
-**Improvement/Feature Description:**
-Describe the improvement or new feature you'd like to see in these dotfiles.
+**Description:**
+Describe the improvement you'd like to see in these dotfiles.
 
 **Reason for Request:**
 Explain why this improvement or feature would be useful. How would it benefit users?

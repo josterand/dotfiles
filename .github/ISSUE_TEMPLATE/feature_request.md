@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-**Feature Description:**
-Describe the new feature or improvement you'd like to see in the projects. What should this feature do, and how will it enhance the user experience?
+**Description:**
+Describe it. What should this feature do, and how will it enhance the user experience?
 
 **Use Case:**
 Explain the specific problem this feature will solve or the context in which it will be useful.
