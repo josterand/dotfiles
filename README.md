@@ -1,8 +1,10 @@
+> [!WARNING] THE DOCUMENTATION IS CURRENTLY UNDERGOING A COMPLETE OVERHAUL TO PROVIDE A BETTER INFORMATION PAGE.
+
 <div align="center">
-    <a href="#overview"><kbd>Overview</kbd></a>&ensp;&ensp;
-    <a href="#installation"><kbd>Installation</kbd></a>&ensp;&ensp;
-    <a href="#components"><kbd>Components</kbd></a>&ensp;&ensp;
-    <a href="#keybindings"><kbd>Keybindings</kbd></a>&ensp;&ensp;
+    <a href="#overview"><kbd> <br> Overview <br> </kbd></a>&ensp;&ensp;
+    <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
+    <a href="#components"><kbd> <br> Components <br> </kbd></a>&ensp;&ensp;
+    <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
 </div>
 
 <!-- <div align="center">
@@ -15,7 +17,7 @@
 ## Overview
 
 <div align="right">
-    <a href="#overview"><kbd>🡅</kbd></a>
+    <a href="#overview"><kbd><<</kbd></a>
 </div>
 
 <div align="center">
@@ -29,7 +31,7 @@ Instalasi menggunakan `GNU Stow`
 For detailed installation instructions, please refer to the [Installation Guide](INSTALL.md).
 
 <div align="right">
-    <a href="#overview"><kbd>🡅</kbd></a>
+    <a href="#overview"><kbd><<</kbd></a>
 </div>
 
 ## Components
@@ -53,9 +55,9 @@ Here is a list of recommended packages to use with these dotfiles to ensure ever
 | Polkit Daemon       | LX Polkit     | Optional    |
 
 <div align="right">
-    <a href="#overview"><kbd>🡅</kbd></a>
+    <a href="#overview"><kbd><<</kbd></a>
 </div>
 
 ## Keybindings
 
-###### _<div align="center"><sub>This project created by josterand and licensed under the MIT License. No warranty is provided.</sub></div>_
+###### _<div align="center"><sub>This project created by josterand and licensed under the MIT License with no warranty.</sub></div>_
