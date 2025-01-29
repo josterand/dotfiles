@@ -1,8 +1,8 @@
 <div align="center">
-    <a href="#overview"><kbd> <br> Overview <br> </kbd></a>&ensp;&ensp;
-    <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
-    <a href="#components"><kbd> <br> Components <br> </kbd></a>&ensp;&ensp;
-    <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
+    <a href="#overview"><kbd>Overview</kbd></a>&ensp;&ensp;
+    <a href="#installation"><kbd>Installation</kbd></a>&ensp;&ensp;
+    <a href="#components"><kbd>Components</kbd></a>&ensp;&ensp;
+    <a href="#keybindings"><kbd>Keybindings</kbd></a>&ensp;&ensp;
 </div>
 
 <!-- <div align="center">
