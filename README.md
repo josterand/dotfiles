@@ -1,11 +1,8 @@
 <div align="center">
-    <a href="#overview"><kbd>Overview</kbd></a>&ensp;&ensp;
-    <a href="#installation"><kbd>Installation</kbd></a>&ensp;&ensp;
-    <a href="#components"><kbd>Components</kbd></a>&ensp;&ensp;
-    <a href="#keybindings"><kbd>Keybindings</kbd></a>&ensp;&ensp;
-    <a href="https://www.youtube.com/watch?v=2rWqdKU1vu8&list=PLt8rU_ebLsc5yEHUVsAQTqokIBMtx3RFY&index=1"><kbd>Youtube</kbd></a>&ensp;&ensp;
-    <a href="https://github.com/prasanthrangan/hyprdots/wiki"><kbd>Wiki</kbd></a>&ensp;&ensp;
-    <a href="[def]"><kbd>Discord</kbd></a>
+    <a href="#overview"><kbd><br>Overview<br></kbd></a>&ensp;&ensp;
+    <a href="#installation"><kbd><br>Installation<br></kbd></a>&ensp;&ensp;
+    <a href="#components"><kbd><br>Components<br></kbd></a>&ensp;&ensp;
+    <a href="#keybindings"><kbd><br>Keybindings<br></kbd></a>&ensp;&ensp;
 </div>
 
 <!-- <div align="center">
@@ -39,7 +36,8 @@ For detailed installation instructions, please refer to the [Installation Guide]
 
 Here is a list of recommended packages to use with these dotfiles to ensure everything works smoothly.
 
-> [!TIP] > _Optional means you can replace it with an application or package of your choice. However, make sure to update the BSPWM configuration accordingly to ensure everything works properly._
+> [!TIP]
+> _Optional means you can replace it with an application or package of your choice. However, make sure to update the BSPWM configuration accordingly to ensure everything works properly._
 
 | Use Case            | Package       | Requirement |
 | ------------------- | ------------- | ----------- |
