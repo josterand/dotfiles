@@ -1,0 +1,78 @@
+#!/bin/sh
+
+# ***************************************************
+# Author: Jonathan Steve Roland (josterand)
+# Github: https://github.com/josterand
+#
+# This project is licensed under the MIT License.
+# Copyright (c) 2024 Jonathan Steve Roland (josterand).
+# For detailed terms and conditions, please refer to
+# the LICENSE file included with this project.
+# ***************************************************
+
+# Retrieve system uptime
+uptime="$(uptime -p | sed -e 's/up //g')"
+
+# Define icons for each action
+shutdown='Shutdown'
+reboot='Restart'
+lock='Lock'
+suspend='Sleep'
+logout='Log Out'
+
+# Function to display the Rofi menu and handle user selection
+run_rofi() {
+    printf "%s\n%s\n%s\n%s\n%s\n" "$lock" "$suspend" "$logout" "$reboot" "$shutdown" | rofi_cmd
+}
+
+# Function to execute Rofi with specified configuration
+rofi_cmd() {
+    rofi -dmenu \
+        -mesg "Uptime: $uptime" \
+        -theme "$HOME/.config/rofi/themes/appmenu/appmenu.rasi" \
+        -theme-str 'mainbox {children: [ "message", "listview" ];}' \
+        -theme-str 'listview {columns: 5; lines: 1;}'
+}
+
+
+# Function to execute commands based on the selection
+run_cmd() {
+    case "$1" in
+    --shutdown)
+        systemctl poweroff
+        ;;
+    --reboot)
+        systemctl reboot
+        ;;
+    --suspend)
+        systemctl suspend
+        ;;
+    --logout)
+        bspc quit
+        ;;
+    esac
+}
+
+# Execute the Rofi menu and handle user selection
+chosen="$(run_rofi)"
+case "$chosen" in
+"$shutdown")
+    run_cmd --shutdown
+    ;;
+"$reboot")
+    run_cmd --reboot
+    ;;
+"$lock")
+    if command -v betterlockscreen >/dev/null 2>&1; then
+        betterlockscreen -l
+    elif command -v i3lock >/dev/null 2>&1; then
+        i3lock
+    fi
+    ;;
+"$suspend")
+    run_cmd --suspend
+    ;;
+"$logout")
+    run_cmd --logout
+    ;;
+esac
