@@ -1,0 +1,54 @@
+## ***************************************************
+## Author: Jonathan Steve Roland (josterand)
+## Github: https://github.com/josterand
+##
+## This project is licensed under the MIT License.
+## Copyright (c) 2024 Jonathan Steve Roland (josterand).
+## For detailed terms and conditions, please refer to
+## the LICENSE file included with this project.
+## ***************************************************
+
+[general]
+# Import color and font configuration
+import = [
+    "~/.config/alacritty/colors.toml",
+    "~/.config/alacritty/fonts.toml"
+]
+# Apply changes without re-opening Alacritty
+live_config_reload = true
+
+[cursor]
+# Cursor blink interval in milliseconds
+blink_interval = 350
+
+[cursor.style]
+# Cursor shape and blinking behavior
+shape = "Block"
+blinking = "Always"
+
+[scrolling]
+# Scrollback history and speed multiplier
+history = 10000
+multiplier = 3
+
+[selection]
+# Save selected text to clipboard
+save_to_clipboard = true
+
+[env]
+# Terminal type
+TERM = "xterm-256color"
+
+[window]
+# Window appearance and behavior
+startup_mode = "Windowed"
+decorations = "None"
+decorations_theme_variant = "None"
+dynamic_padding = false
+opacity = 1.0
+blur = false
+
+[window.padding]
+# Window padding in pixels
+x = 20
+y = 20

@@ -1,0 +1,32 @@
+## ***************************************************
+## Author: Jonathan Steve Roland (josterand)
+## Github: https://github.com/josterand
+##
+## This project is licensed under the MIT License.
+## Copyright (c) 2024 Jonathan Steve Roland (josterand).
+## For detailed terms and conditions, please refer to
+## the LICENSE file included with this project.
+## ***************************************************
+
+# Alacritty color configuration
+
+[colors]
+transparent_background_colors = false
+
+[colors.primary]
+background  = "#060B0D"
+foreground  = "#FFFFFF"
+
+[colors.cursor]
+text    = "#FFFFFF"
+cursor  = "#FFFFFF"
+
+[colors.normal]
+black   = "#121212"
+red     = "#DB4437"
+green   = "#0F9D58"
+yellow  = "#F4B400"
+blue    = "#4285F4"
+magenta = "#bb86fc"
+cyan    = "#03dac6"
+white   = "#FFFFFF"
