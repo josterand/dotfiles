@@ -52,6 +52,6 @@ volume master {
 }
 
 wireless wlp12s0 {
-    format_up = "󰤨  %essid (%quality)"
+    format_up = "󰤨  %essid"
     format_down = "󰤭  Offline"
 }
