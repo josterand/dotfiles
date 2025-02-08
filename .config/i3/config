@@ -41,6 +41,8 @@ bar {
     status_command i3status
     font pango:Inter 12
     position bottom
+    height 30
+    padding 5
     tray_output primary
     tray_padding 4
     colors {
