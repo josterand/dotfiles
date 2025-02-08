@@ -14,10 +14,6 @@
 
 ## OVERVIEW
 
-<div align="right">
-    <a href="#overview"><kbd>Back to Top</kbd></a>
-</div>
-
 <div align="center">
     <img src="" width=360 alt="SHOWCASE HERE">
     <img src="" width=360 alt="SHOWCASE HERE">
@@ -51,10 +47,6 @@ You can also install configs individually depending on your needs. For example, 
 > [!WARNING]
 > Always back up your existing rice and config files before applying new ones!
 
-<div align="right">
-    <a href="#overview"><kbd>Back to Top</kbd></a>
-</div>
-
 ## COMPONENTS
 
 Here’s a list of components I use to set up my i3WM environment.
@@ -82,10 +74,6 @@ These are the supporting apps and packages I use.
 | Keyring             | Gnome Keyring | Optional    |
 | Appearance Setter   | LX Appearance | Optional    |
 | Polkit Daemon       | LX Polkit     | Optional    |
-
-<div align="right">
-    <a href="#overview"><kbd>Back to Top</kbd></a>
-</div>
 
 ## KEYBINDINGS
 
@@ -123,10 +111,6 @@ These are the supporting apps and packages I use.
 | **Mod+Shift+E**                    | Show exit confirmation for i3           | -                   |
 
 Keybindings may change over time to fit my workflow, but for now, they’re mostly based on i3’s default settings.
-
-<div align="right">
-    <a href="#overview"><kbd>Back to Top</kbd></a>
-</div>
 
 ---
 
