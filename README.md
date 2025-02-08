@@ -15,8 +15,7 @@
 ## OVERVIEW
 
 <div align="center">
-    <img src="" width=360 alt="SHOWCASE HERE">
-    <img src="" width=360 alt="SHOWCASE HERE">
+    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/showcase.png" alt="Desktop Showcase">
 </div>
 
 ## INSTALLATION
