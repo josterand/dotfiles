@@ -12,7 +12,7 @@
     <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
 </div>
 
-## Overview
+## OVERVIEW
 
 <div align="right">
     <a href="#overview"><kbd>Back to Top</kbd></a>
@@ -23,7 +23,7 @@
     <img src="" width=360 alt="SHOWCASE HERE">
 </div>
 
-## Installation
+## INSTALLATION
 
 I highly recommend using `GNU Stow` for installation. This ensures a safe and non-destructive setup without messing up other system files.
 The repo structure is already designed to work seamlessly with Stow.
@@ -55,19 +55,19 @@ You can also install configs individually depending on your needs. For example, 
     <a href="#overview"><kbd>Back to Top</kbd></a>
 </div>
 
-## Components
+## COMPONENTS
 
 Here’s a list of components I use to set up my i3WM environment.
 Some are required, while others are optional. Feel free to swap them with alternatives based on your preferences.
 
-#### A. Fonts
+#### A. FONTS
 
 -   **[JetBrainsMonoNerd Font](https://www.nerdfonts.com/font-downloads)** or any other monospace nerd font for icons in the bar and terminal.
 -   **[Inter Font](https://fonts.google.com/specimen/Inter)** for UI elements.
 
 Why these fonts? Simple. They have an open-source license (OFL), are highly readable, and look clean and elegant—perfect for a minimalistic setup.
 
-#### B. Supporting Applications
+#### B. SUPPORTING APPLICATIONS
 
 These are the supporting apps and packages I use.
 “Optional” means you can replace them with alternatives, but make sure they work well with i3WM.
@@ -87,7 +87,7 @@ These are the supporting apps and packages I use.
     <a href="#overview"><kbd>Back to Top</kbd></a>
 </div>
 
-## Keybindings
+## KEYBINDINGS
 
 | **Keybinds**                       | **What It Does**                        | **Notes**           |
 | ---------------------------------- | --------------------------------------- | ------------------- |
