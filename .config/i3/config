@@ -24,8 +24,6 @@ exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
 exec --no-startup-id lxpolkit
 
 # ==========[ APPEARANCE ]==========
-gaps inner 10
-
 set $base #121212
 set $text #FFFFFF
 set $muted #BDBDBD
@@ -39,9 +37,8 @@ client.background        $base
 
 bar {
     status_command i3status
-    font pango:Inter 13
+    font pango:Inter 12
     position bottom
-    height 35
     tray_output primary
     tray_padding 5
     colors {
