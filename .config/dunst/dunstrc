@@ -9,58 +9,53 @@
 # ***************************************************
 
 [global]
-monitor = 0
-follow = mouse
-geometry = "300x5-30+20"
-origin = bottom-right
-scale = 0
-notification_limit = 0
-progress_bar = true
-progress_bar_height = 10
-progress_bar_frame_width = 1
-progress_bar_min_width = 150
-progress_bar_max_width = 300
-indicate_hidden = yes
-transparency = 0
-separator_height = 5
-padding = 15
-horizontal_padding = 15
-text_icon_padding = 0
-frame_width = 0
-frame_color = "#121212"
-separator_color = frame
-sort = yes
-font = Inter 11
-line_height = 0
-markup = full
-format = "<b>%s</b>\n%b"
 alignment = left
-vertical_alignment = left
-show_age_threshold = 60
 ellipsize = middle
-ignore_newline = yes
-stack_duplicates = true
+follow = mouse
+font = Inter 12
+format = "<b>%s</b>\n%b"
+frame_color = "#89b4fa"
+frame_width = 0
+geometry = "300x5-30+20"
 hide_duplicate_count = false
-show_indicators = no
+highlight = "#89b4fa"
+horizontal_padding = 15
 icon_position = left
 icon_size = 48
+ignore_newline = yes
+indicate_hidden = yes
+line_height = 0
+markup = full
 max_icon_size = 80
+monitor = 0
+notification_limit = 0
+origin = bottom-right
+padding = 15
+progress_bar = true
+progress_bar_frame_width = 1
+progress_bar_height = 10
+progress_bar_max_width = 300
+progress_bar_min_width = 150
+scale = 0
+separator_color = frame
+separator_height = 5
+show_age_threshold = 60
+show_indicators = no
+sort = yes
+stack_duplicates = true
+text_icon_padding = 0
+transparency = 0
+vertical_alignment = left
 
 [urgency_low]
-background = "#121212"
-foreground = "#FFFFFF"
-highlight = "#FFFFFF"
-timeout = 10
+background = "#1e1e2e"
+foreground = "#cdd6f4"
 
 [urgency_normal]
-background = "#121212"
-foreground = "#FFFFFF"
-highlight = "#FFFFFF"
-highlight-background = "#232429"
-timeout = 10
+background = "#1e1e2e"
+foreground = "#cdd6f4"
 
 [urgency_critical]
-background = "#121212"
-foreground = "#FFFFFF"
-highlight = "#FFFFFF"
-timeout = 10
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
