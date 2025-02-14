@@ -1,5 +1,6 @@
 ---
 name: Improvement suggestion
+about: Advice to help make the rice even better.
 title: ""
 labels: enhancement
 assignees: ''

@@ -1,5 +1,6 @@
 ---
 name: Feature request
+about: Report a bug to help improve the project.
 title: ""
 labels: feature
 assignees: ''
