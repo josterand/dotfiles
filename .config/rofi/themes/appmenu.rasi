@@ -1,3 +1,15 @@
+/*
+# ***************************************************
+# Author: Jonathan Steve Roland (josterand)
+# Github: https://github.com/josterand
+#
+# This project is licensed under the MIT License.
+# Copyright (c) 2024 Jonathan Steve Roland (josterand).
+# For detailed terms and conditions, please refer to
+# the LICENSE file included with this project.
+# ***************************************************
+*/
+
 * {
     bg-col:  #1e1e2e;
     bg-col-light: #1e1e2e;
