@@ -1,65 +1,71 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/banner.png" alt="GITHUB BANNER HERE">
+    <h1>Josterand's Rice</1h><br><br>
 </div>
-
-<br>
-<br>
 
 <div align="center">
     <a href="#overview"><kbd> <br> Overview <br> </kbd></a>&ensp;&ensp;
+    <a href="#showcase"><kbd> <br> Showcase <br> </kbd></a>&ensp;&ensp;
     <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
     <a href="#components"><kbd> <br> Components <br> </kbd></a>&ensp;&ensp;
     <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
 </div>
 
-## OVERVIEW
+## Overview
+
+This is a rice setup I built for my personal use. I like window managers because they are lightweight and highly customizable. This rice setup follows the philosophy of "the simpler, the better," meaning it's minimalist but still functional by only including the most essential features.
+
+## Screenshots
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/showcase.png" alt="Desktop Showcase">
+    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/showcase.png" alt="rice showcase screenshot">
 </div>
 
-This setup is based on **i3** and features:
+## Installation (This Section is in WIP)
 
--   ✅ Clean and simple window management
--   ✅ Fast key-driven workflow
--   ✅ Minimalist design with essential components
--   ✅ Easy customization and expandability
+<details>
+<summary><b>Prerequisites</b></summary>
 
-## INSTALLATION
+Please install all the necessary programs and dependencies to ensure this rice setup works smoothly.
+The commands provided here are for **APT** and **Pacman**. For Fedora and Red-Hat based distributions, please adjust accordingly (I haven't used those distros since i started using Linux).
 
-### **1. Prerequisites**
-
-Ensure your system has the following installed before proceeding:
-
--   **Git** → for cloning repositories
--   **GNU Stow** → for managing dotfiles
--   **i3** → tiling window manager
-
-Install them via package manager:
+**Command for APT:**
 
 ```bash
-sudo apt install git stow i3
+sudo apt install stow
 ```
 
-### **2. Cloning & Applying Configs**
+**Command for Pacman:**
 
-Clone this repository and use **Stow** to apply configurations:
+```bash
+sudo pacman -S stow
+```
 
+</details>
+
+<details>
+<summary><b>Cloning & Applying dotfiles</b></summary>
+
+After you have installed all the necessary programs and dependencies, you can now apply the dotfiles. Clone this repository into the `~/` or `$HOME` directory. Remember, it must be there. Once the dotfiles repository is cloned and stowed, do not delete the parent folder without proper execution as it will create broken symlinks.
+
+**Clones the repo and creates symlinks with stow:**
 ```bash
 cd $HOME
 git clone https://github.com/josterand/dotfiles.git
 stow -d $HOME/dotfiles
 ```
-
-To remove configurations:
+If you want to uninstall these dotfiles, you just need to "destow" them, then you are free to do anything with the parent folder.
+**To remove configurations:**
 
 ```bash
 stow -D -d $HOME/dotfiles
 ```
+</details>
+
+<br>
 
 **💡 Note:** You can also install configs manually by copying the needed files. Always back up your existing rice and config files before applying new ones!
 
-## COMPONENTS
+## Components details
 
 Here’s a list of components used in my i3WM setup. You can replace optional components based on your preference.
 
@@ -80,8 +86,6 @@ The following fonts are used in the setup:
 
 -   **[JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)** (Monospace + Icons)
 -   **[Inter Font](https://fonts.google.com/specimen/Inter)** (UI elements)
-
----
 
 ## KEYBINDINGS
 
