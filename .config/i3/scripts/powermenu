@@ -17,15 +17,15 @@
 
 # ==========[ VARIABLES ]==========
 # Define icons for each option
-suspend=" Suspend"
-exit=" Exit i3"
-shutdown=" Shutdown"
-reboot=" Reboot"
+suspend=""
+exit=""
+shutdown=""
+reboot=""
 
 # ==========[ FUNCTIONS ]==========
 # Prints the available power menu options. and pipes them into the launcher_cmd function.
 runner_cmd() {
-    printf "$suspend\n$exit\n$shutdown\n$reboot" | launcher_cmd
+    printf "$suspend\n$exit\n$reboot\n$shutdown" | launcher_cmd
 }
 
 # Launch rofi in dmenu mode with a specified theme to display the power menu options.
