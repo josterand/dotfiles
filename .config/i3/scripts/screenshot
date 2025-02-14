@@ -10,4 +10,12 @@
 # the LICENSE file included with this project.
 # ***************************************************
 
-rofi -show drun -cycle false -theme ~/.config/rofi/themes/appmenu/appmenu.rasi
+# This is a script to take screenshots with scrot
+# The screenshot automatically captures the entire screen without the cursor
+
+# Create a directory to save screenshots if it doesn't exist
+mkdir -p ~/Pictures/Screenshots
+
+# Take screenshot and send notification to the user
+scrot ~/Pictures/Screenshots/screenshot-%Y-%m-%d-%T.png
+notify-send "Screenshot Saved!" "Image saved to ~/Pictures/Screenshots"

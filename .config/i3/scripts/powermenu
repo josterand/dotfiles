@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# ***************************************************
+# Author: Jonathan Steve Roland (josterand)
+# Github: https://github.com/josterand
+#
+# This project is licensed under the MIT License.
+# Copyright (c) 2024 Jonathan Steve Roland (josterand).
+# For detailed terms and conditions, please refer to
+# the LICENSE file included with this project.
+# ***************************************************
+
+# A simple and straightforward script I created to display a power menu.
+# This script is specific and can only be used with rofi and the i3wm environment.
+# Note that you need to use systemd to be able to run this script
+# because the commands used to manage power states are from systemd ('systemctl' command).
+
+# ==========[ VARIABLES ]==========
+# Define icons for each option
+suspend=" Suspend"
+exit=" Exit i3"
+shutdown=" Shutdown"
+reboot=" Reboot"
+
+# ==========[ FUNCTIONS ]==========
+# Prints the available power menu options. and pipes them into the launcher_cmd function.
+runner_cmd() {
+    printf "$suspend\n$exit\n$shutdown\n$reboot" | launcher_cmd
+}
+
+# Launch rofi in dmenu mode with a specified theme to display the power menu options.
+launcher_cmd() {
+    rofi -dmenu -i -theme ~/.config/rofi/themes/powermenu.rasi
+}
+
+# ==========[ MAIN ]==========
+# Run runner_cmd function and store the returned value inside a variable.
+selected_option=$(runner_cmd)
+
+case "$selected_option" in
+"$suspend")
+    systemctl suspend
+    ;;
+"$exit")
+    i3-msg exit
+    ;;
+"$shutdown")
+    systemctl poweroff
+    ;;
+"$reboot")
+    systemctl reboot
+    ;;
+esac
