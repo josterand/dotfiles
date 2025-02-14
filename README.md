@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="" alt="GITHUB BANNER HERE">
+    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/banner.png" alt="GITHUB BANNER HERE">
 </div>
 
 <br>
@@ -18,16 +18,31 @@
     <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/showcase.png" alt="Desktop Showcase">
 </div>
 
+This setup is based on **i3** and features:
+- ✅ Clean and simple window management
+- ✅ Fast key-driven workflow
+- ✅ Minimalist design with essential components
+- ✅ Easy customization and expandability
+
 ## INSTALLATION
 
-I highly recommend using `GNU Stow` for installation. This ensures a safe and non-destructive setup without messing up other system files.
-The repo structure is already designed to work seamlessly with Stow.
-You can install `stow` via your Linux distro's package manager.
+### **1. Prerequisites**
 
-1. First, install Stow and then clone this repo into your `$HOME` directory or `~/`.
-2. Navigate to `~/dotfiles` and run Stow:
+Ensure your system has the following installed before proceeding:
 
-Run the following commands:
+-   **Git** → for cloning repositories
+-   **GNU Stow** → for managing dotfiles
+-   **i3** → tiling window manager
+
+Install them via package manager:
+
+```bash
+sudo apt install git stow i3
+```
+
+### **2. Cloning & Applying Configs**
+
+Clone this repository and use **Stow** to apply configurations:
 
 ```bash
 cd $HOME
@@ -35,82 +50,83 @@ git clone https://github.com/josterand/dotfiles.git
 stow -d $HOME/dotfiles
 ```
 
-To uninstall, just de-stow the config files:
+To remove configurations:
 
 ```bash
 stow -D -d $HOME/dotfiles
 ```
 
-You can also install configs individually depending on your needs. For example, if you only need the Alacritty config, simply copy `../.config/alacritty` to your own config folder, like `~/.config/`.
-
-> [!WARNING]
-> Always back up your existing rice and config files before applying new ones!
+**💡 Note:** You can also install configs manually by copying the needed files. Always back up your existing rice and config files before applying new ones!
 
 ## COMPONENTS
 
-Here’s a list of components I use to set up my i3WM environment.
-Some are required, while others are optional. Feel free to swap them with alternatives based on your preferences.
+Here’s a list of components used in my i3WM setup. You can replace optional components based on your preference.
 
-#### A. FONTS
+| **Category**       | **Package**   | **Required?** |
+| ------------------ | ------------- | ------------- |
+| **Window Manager** | i3-WM         | ✅ Yes        |
+| **Terminal**       | Alacritty     | ❌ No         |
+| **Launcher**       | Rofi          | ✅ Yes        |
+| **Notifications**  | Dunst         | ✅ Yes        |
+| **Wallpaper**      | Feh           | ❌ No         |
+| **Keyring**        | Gnome Keyring | ❌ No         |
+| **Appearance**     | LX Appearance | ❌ No         |
+| **Polkit Daemon**  | LX Polkit     | ❌ No         |
 
--   **[JetBrainsMonoNerd Font](https://www.nerdfonts.com/font-downloads)** or any other monospace nerd font for icons in the bar and terminal.
--   **[Inter Font](https://fonts.google.com/specimen/Inter)** for UI elements.
+### **Fonts**
 
-Why these fonts? Simple. They have an open-source license (OFL), are highly readable, and look clean and elegant—perfect for a minimalistic setup.
+The following fonts are used in the setup:
 
-#### B. SUPPORTING APPLICATIONS
+-   **[JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)** (Monospace + Icons)
+-   **[Inter Font](https://fonts.google.com/specimen/Inter)** (UI elements)
 
-These are the supporting apps and packages I use.
-“Optional” means you can replace them with alternatives, but make sure they work well with i3WM.
-
-| Use Case            | Package       | Requirement |
-| ------------------- | ------------- | ----------- |
-| Window Manager      | i3-WM         | Required    |
-| Terminal            | Alacritty     | Optional    |
-| Launcher            | Rofi          | Required    |
-| Notification Daemon | Dunst         | Required    |
-| Wallpaper Setter    | Feh           | Optional    |
-| Keyring             | Gnome Keyring | Optional    |
-| Appearance Setter   | LX Appearance | Optional    |
-| Polkit Daemon       | LX Polkit     | Optional    |
+---
 
 ## KEYBINDINGS
 
-| **Keybinds**                       | **What It Does**                        | **Notes**           |
-| ---------------------------------- | --------------------------------------- | ------------------- |
-| **Mod+Enter**                      | Open terminal                           | -                   |
-| **Mod+Shift+W**                    | Close active window                     | -                   |
-| **Mod+D**                          | Open `dmenu_run`                        | -                   |
-| **Mod+J**                          | Move focus to the left window           | -                   |
-| **Mod+K**                          | Move focus to the window below          | -                   |
-| **Mod+L**                          | Move focus to the window above          | -                   |
-| **Mod+;**                          | Move focus to the right window          | -                   |
-| **Mod+Shift+J**                    | Move the window to the left             | -                   |
-| **Mod+Shift+K**                    | Move the window down                    | -                   |
-| **Mod+Shift+L**                    | Move the window up                      | -                   |
-| **Mod+Shift+;**                    | Move the window to the right            | -                   |
-| **Mod+H**                          | Split layout horizontally               | -                   |
-| **Mod+V**                          | Split layout vertically                 | -                   |
-| **Mod+F**                          | Toggle fullscreen                       | -                   |
-| **Mod+E**                          | Toggle split layout mode                | -                   |
-| **Mod+Shift+Space**                | Toggle floating mode                    | -                   |
-| **Mod+Space**                      | Switch between tiling and floating mode | -                   |
-| **Mod+R**                          | Enter Resize Mode                       | -                   |
-| **Left Arrow**                     | Shrink window width                     | Only in Resize Mode |
-| **Right Arrow**                    | Expand window width                     | Only in Resize Mode |
-| **Up Arrow**                       | Shrink window height                    | Only in Resize Mode |
-| **Down Arrow**                     | Expand window height                    | Only in Resize Mode |
-| **Enter**                          | Exit Resize Mode                        | Only in Resize Mode |
-| **Escape**                         | Exit Resize Mode                        | Only in Resize Mode |
-| **Mod+R**                          | Exit Resize Mode                        | Only in Resize Mode |
-| **Mod+1** to **Mod+0**             | Switch to workspace 1–10                | -                   |
-| **Mod+Shift+1** to **Mod+Shift+0** | Move window to workspace 1–10           | -                   |
-| **Mod+Shift+C**                    | Reload i3 config                        | -                   |
-| **Mod+Shift+R**                    | Restart i3                              | -                   |
-| **Mod+Shift+E**                    | Show exit confirmation for i3           | -                   |
+| **Keybinds**                       | **Function**                              |
+| ---------------------------------- | ----------------------------------------- |
+| **Mod+1** to **Mod+0**             | Switch to workspace **1-10**              |
+| **Mod+Shift+1** to **Mod+Shift+0** | Move window to workspace **1-10**         |
+| **Mod+Tab**                        | Switch to next workspace                  |
+| **Mod+Shift+Tab**                  | Switch to previous workspace              |
+| **Mod+Return**                     | Open terminal                             |
+| **Mod+Shift+W**                    | Close active window                       |
+| **Mod+D**                          | Open app menu                             |
+| **Mod+F11**                        | Take a screenshot                         |
+| **Mod+J**                          | Move focus **left**                       |
+| **Mod+K**                          | Move focus **down**                       |
+| **Mod+L**                          | Move focus **up**                         |
+| **Mod+;**                          | Move focus **right**                      |
+| **Mod+Shift+J**                    | Move window **left**                      |
+| **Mod+Shift+K**                    | Move window **down**                      |
+| **Mod+Shift+L**                    | Move window **up**                        |
+| **Mod+Shift+;**                    | Move window **right**                     |
+| **Mod+H**                          | Split layout **horizontally**             |
+| **Mod+V**                          | Split layout **vertically**               |
+| **Mod+F**                          | Toggle **fullscreen**                     |
+| **Mod+E**                          | Toggle **split layout mode**              |
+| **Mod+Shift+Space**                | Toggle **floating mode**                  |
+| **Mod+Space**                      | Switch between **tiling & floating mode** |
+| **Mod+Shift+C**                    | **Reload** i3 config                      |
+| **Mod+Shift+R**                    | **Restart** i3                            |
+| **Mod+Shift+E**                    | Open power menu                           |
+| **Mod+R**                          | Enter **Resize Mode**                     |
+| **Left Arrow**                     | Shrink **width** (Resize Mode)            |
+| **Right Arrow**                    | Expand **width** (Resize Mode)            |
+| **Up Arrow**                       | Shrink **height** (Resize Mode)           |
+| **Down Arrow**                     | Expand **height** (Resize Mode)           |
+| **Enter / Escape / Mod+R**         | Exit **Resize Mode**                      |
 
 Keybindings may change over time to fit my workflow, but for now, they’re mostly based on i3’s default settings.
 
 ---
 
-###### _<div align="center"><sub>This project was created by josterand and is licensed under the MIT License with no warranty.</sub></div>_
+## LICENSE
+
+This project is licensed under the **MIT License**.
+Feel free to use, modify, and distribute it as needed.
+
+<div align="center">
+    <sub>This project was created by josterand and is licensed under the MIT License with no warranty.</sub>
+</div>
