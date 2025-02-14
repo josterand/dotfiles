@@ -102,10 +102,6 @@ bar {
     }
 }
 
-# ==========[ BEHAVIOR ]==========
-assign [class="google-chrome"] $ws1
-
-
 # ==========[ WORKSPACE KEYBINDINGS ]==========
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -136,7 +132,6 @@ bindsym $mod+Shift+Tab workspace prev
 # ==========[ SYSTEM CONTROL KEYBINDINGS ]==========
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
 
 # ==========[ AUDIO CONTROL KEYBINDINGS ]==========
