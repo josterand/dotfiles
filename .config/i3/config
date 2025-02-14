@@ -132,7 +132,7 @@ bindsym $mod+Shift+Tab workspace prev
 # ==========[ SYSTEM CONTROL KEYBINDINGS ]==========
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec --no-startup-id ~/.config/i3/scripts/powermenu
+bindsym $mod+Escape exec --no-startup-id ~/.config/i3/scripts/powermenu
 
 # ==========[ AUDIO CONTROL KEYBINDINGS ]==========
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
