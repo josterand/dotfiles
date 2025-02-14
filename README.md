@@ -19,10 +19,11 @@
 </div>
 
 This setup is based on **i3** and features:
-- ✅ Clean and simple window management
-- ✅ Fast key-driven workflow
-- ✅ Minimalist design with essential components
-- ✅ Easy customization and expandability
+
+-   ✅ Clean and simple window management
+-   ✅ Fast key-driven workflow
+-   ✅ Minimalist design with essential components
+-   ✅ Easy customization and expandability
 
 ## INSTALLATION
 
@@ -110,7 +111,7 @@ The following fonts are used in the setup:
 | **Mod+Space**                      | Switch between **tiling & floating mode** |
 | **Mod+Shift+C**                    | **Reload** i3 config                      |
 | **Mod+Shift+R**                    | **Restart** i3                            |
-| **Mod+Shift+E**                    | Open power menu                           |
+| **Mod+Escape**                     | Open power menu                           |
 | **Mod+R**                          | Enter **Resize Mode**                     |
 | **Left Arrow**                     | Shrink **width** (Resize Mode)            |
 | **Right Arrow**                    | Expand **width** (Resize Mode)            |
