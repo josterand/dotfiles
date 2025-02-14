@@ -1,14 +1,13 @@
 ---
 name: Feature request
-about: Suggest an idea to help improve the project.
-title: "[FEATURE] write the title here"
+title: ""
 labels: feature
 assignees: ''
 
 ---
 
 **Description:**
-Describe it. What should this feature do, and how will it enhance the user experience?
+Describe what this feature should do and how it will enhance the user experience.
 
 **Use Case:**
 Explain the specific problem this feature will solve or the context in which it will be useful.

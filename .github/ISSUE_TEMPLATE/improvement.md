@@ -1,11 +1,11 @@
 ---
-name: Improvement
-about: Improvement advice to help make this project even better.
-title: "[IMPROVEMENT] write the title here"
+name: Improvement suggestion
+title: ""
 labels: enhancement
 assignees: ''
 
 ---
+
 **Description:**
 Describe the improvement you'd like to see in these dotfiles.
 
