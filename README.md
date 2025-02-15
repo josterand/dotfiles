@@ -1,93 +1,76 @@
 <div align="center">
-    <h1>Josterand's Rice</1h><br><br>
-</div>
+
+```text
+$$$$$$$\   $$$$$$\ $$$$$$$$\ $$$$$$$$\ $$$$$$\ $$\       $$$$$$$$\  $$$$$$\  
+$$  __$$\ $$  __$$\\__$$  __|$$  _____|\_$$  _|$$ |      $$  _____|$$  __$$\ 
+$$ |  $$ |$$ /  $$ |  $$ |   $$ |        $$ |  $$ |      $$ |      $$ /  \__|
+$$ |  $$ |$$ |  $$ |  $$ |   $$$$$\      $$ |  $$ |      $$$$$\    \$$$$$$\  
+$$ |  $$ |$$ |  $$ |  $$ |   $$  __|     $$ |  $$ |      $$  __|    \____$$\ 
+$$ |  $$ |$$ |  $$ |  $$ |   $$ |        $$ |  $$ |      $$ |      $$\   $$ |
+$$$$$$$  | $$$$$$  |  $$ |   $$ |      $$$$$$\ $$$$$$$$\ $$$$$$$$\ \$$$$$$  |
+\_______/  \______/   \__|   \__|      \______|\________|\________| \______/ 
+
+by Josterand
+```
+
+</div
+
+---
 
 <div align="center">
-    <a href="#overview"><kbd> <br> Overview <br> </kbd></a>&ensp;&ensp;
-    <a href="#showcase"><kbd> <br> Showcase <br> </kbd></a>&ensp;&ensp;
-    <a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
-    <a href="#components"><kbd> <br> Components <br> </kbd></a>&ensp;&ensp;
-    <a href="#keybindings"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
+    <a href="#overview"><kbd> <br> OVERVIEW <br> </kbd></a>&ensp;&ensp;
+    <a href="#installation"><kbd> <br> INSTALLATION <br> </kbd></a>&ensp;&ensp;
+    <a href="#keybindings"><kbd> <br> KEYBINDINGS <br> </kbd></a>&ensp;&ensp;
+    <a href="#components"><kbd> <br> LICENSE <br> </kbd></a>&ensp;&ensp;
 </div>
 
-## Overview
+## <strong><code>OVERVIEW</code></strong>
 
-This is a rice setup I built for my personal use. I like window managers because they are lightweight and highly customizable. This rice setup follows the philosophy of "the simpler, the better," meaning it's minimalist but still functional by only including the most essential features.
+<img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/showcase.png" alt="rice" align="right" width="480px">
 
-## Screenshots
+I built this rice for my personal use. It follows the philosophy of _"the simpler, the better"_ meaning it's minimalist but still functional by only including the most essential features.
 
-<div align="center">
-    <img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/showcase.png" alt="rice showcase screenshot">
-</div>
+-   :computer: **Window Manager**: [i3 Window Manager](https://i3wm.org/)
+-   :pushpin: **Panel**: [i3bar](https://i3wm.org/i3bar/) with [i3status](https://i3wm.org/docs/i3status.html)
+-   :rocket: **App Launcher**: [Rofi](https://github.com/davatorium/rofi)
+-   :left_speech_bubble: **Notification System**: [Dunst](https://github.com/dunst-project/dunst)
+-   :gear: **Terminal Emulator**: [Alacritty](https://alacritty.org/)
+-   :shell: **Shell**: [Zsh](https://www.zsh.org/)
+-   :file_folder: **File Manager**: [Yazi](https://yazi-rs.github.io/)
 
-## Installation (This Section is in WIP)
+## <strong><code>INSTALLATION</code></strong>
+
+#### <strong><code>1. DEPENDENCIES</code></strong>
 
 <details>
-<summary><b>Prerequisites</b></summary>
-
-Please install all the necessary programs and dependencies to ensure this rice setup works smoothly.
-The commands provided here are for **APT** and **Pacman**. For Fedora and Red-Hat based distributions, please adjust accordingly (I haven't used those distros since i started using Linux).
-
-**Command for APT:**
-
-```bash
-sudo apt install stow
-```
-
-**Command for Pacman:**
-
-```bash
-sudo pacman -S stow
-```
-
+<summary><b>Debian-based Linux</b></summary>
 </details>
 
 <details>
-<summary><b>Cloning & Applying dotfiles</b></summary>
-
-After you have installed all the necessary programs and dependencies, you can now apply the dotfiles. Clone this repository into the `~/` or `$HOME` directory. Remember, it must be there. Once the dotfiles repository is cloned and stowed, do not delete the parent folder without proper execution as it will create broken symlinks.
-
-**Clones the repo and creates symlinks with stow:**
-```bash
-cd $HOME
-git clone https://github.com/josterand/dotfiles.git
-stow -d $HOME/dotfiles
-```
-If you want to uninstall these dotfiles, you just need to "destow" them, then you are free to do anything with the parent folder.
-**To remove configurations:**
-
-```bash
-stow -D -d $HOME/dotfiles
-```
+<summary><b>Arch-based Linux</b></summary>
 </details>
 
-<br>
+<details>
+<summary><b>Red Hat-based Linux</b></summary>
+</details>
 
-**💡 Note:** You can also install configs manually by copying the needed files. Always back up your existing rice and config files before applying new ones!
+#### <strong><code>2. COMPONENTS</code></strong>
 
-## Components details
+<details>
+<summary><b>Font</b></summary>
+</details>
 
-Here’s a list of components used in my i3WM setup. You can replace optional components based on your preference.
+<details>
+<summary><b>Wallpaper</b></summary>
+</details>
 
-| **Category**       | **Package**   | **Required?** |
-| ------------------ | ------------- | ------------- |
-| **Window Manager** | i3-WM         | ✅ Yes        |
-| **Terminal**       | Alacritty     | ❌ No         |
-| **Launcher**       | Rofi          | ✅ Yes        |
-| **Notifications**  | Dunst         | ✅ Yes        |
-| **Wallpaper**      | Feh           | ❌ No         |
-| **Keyring**        | Gnome Keyring | ❌ No         |
-| **Appearance**     | LX Appearance | ❌ No         |
-| **Polkit Daemon**  | LX Polkit     | ❌ No         |
+#### <strong><code>3. INSTALL RICE</code></strong>
 
-### **Fonts**
+<details>
+<summary><b>Stow</b></summary>
+</details>
 
-The following fonts are used in the setup:
-
--   **[JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)** (Monospace + Icons)
--   **[Inter Font](https://fonts.google.com/specimen/Inter)** (UI elements)
-
-## KEYBINDINGS
+## <strong><code>KEYBINDINGS</code></strong>
 
 | **Keybinds**                       | **Function**                              |
 | ---------------------------------- | ----------------------------------------- |
@@ -123,14 +106,11 @@ The following fonts are used in the setup:
 | **Down Arrow**                     | Expand **height** (Resize Mode)           |
 | **Enter / Escape / Mod+R**         | Exit **Resize Mode**                      |
 
-Keybindings may change over time to fit my workflow, but for now, they’re mostly based on i3’s default settings.
+*Keybindings may change over time to fit my workflow, but for now, they’re mostly based on i3’s default settings.*
 
----
+## <strong><code>LICENSE</code></strong>
 
-## LICENSE
-
-This project is licensed under the **MIT License**.
-Feel free to use, modify, and distribute it as needed.
+This project is licensed under the **[MIT License](https://opensource.org/license/mit)**.
 
 <div align="center">
     <sub>This project was created by josterand and is licensed under the MIT License with no warranty.</sub>
