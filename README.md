@@ -21,7 +21,7 @@ by Josterand
     <a href="#overview"><kbd> <br> OVERVIEW <br> </kbd></a>&ensp;&ensp;
     <a href="#installation"><kbd> <br> INSTALLATION <br> </kbd></a>&ensp;&ensp;
     <a href="#keybindings"><kbd> <br> KEYBINDINGS <br> </kbd></a>&ensp;&ensp;
-    <a href="#components"><kbd> <br> LICENSE <br> </kbd></a>&ensp;&ensp;
+    <a href="#license"><kbd> <br> LICENSE <br> </kbd></a>&ensp;&ensp;
 </div>
 
 ## <strong><code>OVERVIEW</code></strong>
