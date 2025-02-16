@@ -1,6 +1,4 @@
-<div align="left">
-
-```text
+```
 $$$$$$$\   $$$$$$\ $$$$$$$$\ $$$$$$$$\ $$$$$$\ $$\       $$$$$$$$\  $$$$$$\  
 $$  __$$\ $$  __$$\\__$$  __|$$  _____|\_$$  _|$$ |      $$  _____|$$  __$$\ 
 $$ |  $$ |$$ /  $$ |  $$ |   $$ |        $$ |  $$ |      $$ |      $$ /  \__|
@@ -8,14 +6,8 @@ $$ |  $$ |$$ |  $$ |  $$ |   $$$$$\      $$ |  $$ |      $$$$$\    \$$$$$$\
 $$ |  $$ |$$ |  $$ |  $$ |   $$  __|     $$ |  $$ |      $$  __|    \____$$\ 
 $$ |  $$ |$$ |  $$ |  $$ |   $$ |        $$ |  $$ |      $$ |      $$\   $$ |
 $$$$$$$  | $$$$$$  |  $$ |   $$ |      $$$$$$\ $$$$$$$$\ $$$$$$$$\ \$$$$$$  |
-\_______/  \______/   \__|   \__|      \______|\________|\________| \______/ 
-
-by Josterand
+\_______/  \______/   \__|   \__|      \______|\________|\________| \______/
 ```
-
-</div
-
----
 
 <div align="center">
     <a href="#overview"><kbd> <br> OVERVIEW <br> </kbd></a>&ensp;&ensp;
@@ -24,13 +16,13 @@ by Josterand
     <a href="#license"><kbd> <br> LICENSE <br> </kbd></a>&ensp;&ensp;
 </div>
 
-## <strong><code>OVERVIEW</code></strong>
+## OVERVIEW
 
-<img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/main/dotfiles/Embeds/showcase.png" alt="rice" align="right" width="480px">
+<img src="https://raw.githubusercontent.com/josterand/assets/refs/heads/embeds/assets/images/dotfiles_desktop-showcase.png" alt="rice" align="right" width="480px">
 
 I built this rice for my personal use. It follows the philosophy of _"the simpler, the better"_ meaning it's minimalist but still functional by only including the most essential features.
 
--   :computer: **Window Manager**: [i3 Window Manager](https://i3wm.org/)
+-   :computer: **Window Manager**: [i3 WM](https://i3wm.org/)
 -   :pushpin: **Panel**: [i3bar](https://i3wm.org/i3bar/) with [i3status](https://i3wm.org/docs/i3status.html)
 -   :rocket: **App Launcher**: [Rofi](https://github.com/davatorium/rofi)
 -   :left_speech_bubble: **Notification System**: [Dunst](https://github.com/dunst-project/dunst)
@@ -38,9 +30,11 @@ I built this rice for my personal use. It follows the philosophy of _"the simple
 -   :shell: **Shell**: [Zsh](https://www.zsh.org/)
 -   :file_folder: **File Manager**: [Yazi](https://yazi-rs.github.io/)
 
-## <strong><code>INSTALLATION</code></strong>
+## INSTALLATION
 
-#### <strong><code>1. DEPENDENCIES</code></strong>
+#### 1. DEPENDENCIES
+
+Daftar pake
 
 <details>
 <summary><b>Debian-based Linux</b></summary>
@@ -54,23 +48,61 @@ I built this rice for my personal use. It follows the philosophy of _"the simple
 <summary><b>Red Hat-based Linux</b></summary>
 </details>
 
-#### <strong><code>2. COMPONENTS</code></strong>
+#### 2. COMPONENTS
+
+:bulb: **_To keep the repository lightweight, the component files used in this rice setup are not included here. You can download them from their official websites linked below, or you can visit the [additional repository](https://github.com/josterand/assets) where I store those files._**
 
 <details>
 <summary><b>Font</b></summary>
+
+Here are the fonts used in this rice setup. So far, this rice only uses open and freely licensed fonts.
+
+| **Font Name**           | **Usage**               | **License**         | **Link**                                                  |
+| ----------------------- | ----------------------- | ------------------- | --------------------------------------------------------- |
+| **JetBrains Mono**      | Alacritty Terminal Font | SIL OFL 1.1 License | [:link: Website](https://www.jetbrains.com/lp/mono/)      |
+| **Font Awesome 6 Free** | Glyph Symbols           | SIL OFL 1.1 License | [:link: Website](https://fontawesome.com)                 |
+| **Inter**               | UI Elements             | SIL OFL 1.1 License | [:link: Website](https://fonts.google.com/specimen/Inter) |
+
 </details>
 
 <details>
 <summary><b>Wallpaper</b></summary>
+
+| **Image**                                                                                                                                                   | **Link**                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| <img alt="Current Wallpaper" src="https://raw.githubusercontent.com/josterand/assets/refs/heads/wallpapers/wallpapers/current-wallpaper.jpg" width="360px"> | [:link: Repository](https://github.com/josterand/assets) |
+
 </details>
 
-#### <strong><code>3. INSTALL RICE</code></strong>
+#### 3. INSTALL RICE
 
 <details>
 <summary><b>Stow</b></summary>
+
+I highly recommends using [GNU Stow](https://www.gnu.org/software/stow/) for installation to ensure quick, conflict-free, and easily reversible setups.
+Stow manages files with symlinks, keeping the structure tidy, flexible, and easy to sync without duplication.
+Make sure to back up your configuration files to avoid data loss in case of unexpected issues.
+
+Clone this repository to your local machine:
+
+```sh
+cd ~/
+git clone https://github.com/josterand/dotfiles.git
+```
+
+Then, use `stow` to apply the configuration from the cloned folder:
+
+```sh
+stow -d $HOME/dotfiles
+```
+
+If the command doesn't return any output, it means the configuration was successfully applied.
+If it returns an error, it indicates that some files already exist in the target directory, and `stow` won't overwrite them to protect your original file. Please move or back up the original file.
+**After installation, make sure not to delete the main dotfiles folder you cloned to avoid broken symlinks!**
+
 </details>
 
-## <strong><code>KEYBINDINGS</code></strong>
+## KEYBINDINGS
 
 | **Keybinds**                       | **Function**                              |
 | ---------------------------------- | ----------------------------------------- |
@@ -106,9 +138,9 @@ I built this rice for my personal use. It follows the philosophy of _"the simple
 | **Down Arrow**                     | Expand **height** (Resize Mode)           |
 | **Enter / Escape / Mod+R**         | Exit **Resize Mode**                      |
 
-*Keybindings may change over time to fit my workflow, but for now, they’re mostly based on i3’s default settings.*
+_Keybindings may change over time to fit my workflow, but for now, they’re mostly based on i3’s default settings._
 
-## <strong><code>LICENSE</code></strong>
+## LICENSE
 
 This project is licensed under the **[MIT License](https://opensource.org/license/mit)**.
 
