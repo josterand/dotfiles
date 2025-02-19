@@ -9,6 +9,7 @@ $$$$$$$  | $$$$$$  |  $$ |   $$ |      $$$$$$\ $$$$$$$$\ $$$$$$$$\ \$$$$$$  |
 \_______/  \______/   \__|   \__|      \______|\________|\________| \______/
 ```
 
+<!-- Menus -->
 <div align="center">
     <a href="#overview"><kbd> <br> OVERVIEW <br> </kbd></a>&ensp;&ensp;
     <a href="#installation"><kbd> <br> INSTALLATION <br> </kbd></a>&ensp;&ensp;
@@ -34,18 +35,11 @@ I built this rice for my personal use. It follows the philosophy of _"the simple
 
 #### 1. DEPENDENCIES
 
-Daftar pake
-
 <details>
 <summary><b>Debian-based Linux</b></summary>
-</details>
 
-<details>
-<summary><b>Arch-based Linux</b></summary>
-</details>
+**WIP! WILL BE ADDED SOON**
 
-<details>
-<summary><b>Red Hat-based Linux</b></summary>
 </details>
 
 #### 2. COMPONENTS
@@ -59,9 +53,9 @@ Here are the fonts used in this rice setup. So far, this rice only uses open and
 
 | **Font Name**           | **Usage**               | **License**         | **Link**                                                  |
 | ----------------------- | ----------------------- | ------------------- | --------------------------------------------------------- |
+| **Inter**               | UI Elements             | SIL OFL 1.1 License | [:link: Website](https://fonts.google.com/specimen/Inter) |
 | **JetBrains Mono**      | Alacritty Terminal Font | SIL OFL 1.1 License | [:link: Website](https://www.jetbrains.com/lp/mono/)      |
 | **Font Awesome 6 Free** | Glyph Symbols           | SIL OFL 1.1 License | [:link: Website](https://fontawesome.com)                 |
-| **Inter**               | UI Elements             | SIL OFL 1.1 License | [:link: Website](https://fonts.google.com/specimen/Inter) |
 
 </details>
 
@@ -97,7 +91,7 @@ stow -d $HOME/dotfiles
 ```
 
 If the command doesn't return any output, it means the configuration was successfully applied.
-If it returns an error, it indicates that some files already exist in the target directory, and `stow` won't overwrite them to protect your original file. Please move or back up the original file.
+If it returns an error, it indicates that some files already exist in the target directory, and `stow` won't overwrite them to protect your original file. You need to move or back up that file.
 **After installation, make sure not to delete the main dotfiles folder you cloned to avoid broken symlinks!**
 
 </details>
