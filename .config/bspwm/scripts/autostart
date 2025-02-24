@@ -15,6 +15,9 @@
 # Monitor setup
 xrandr --output LVDS-1 --mode 1440x900 &
 
+# Start network manager applet
+nm-applet &
+
 # Keyring agent
 gnome-keyring-daemon --start --components=pkcs11 &
 
