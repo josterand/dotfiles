@@ -18,7 +18,7 @@ background  = "#121212"
 foreground  = "#FFFFFF"
 
 [colors.cursor]
-text    = "#FFFFFF"
+text    = "#121212"
 cursor  = "#FFFFFF"
 
 [colors.normal]

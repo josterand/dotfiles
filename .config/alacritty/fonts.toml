@@ -15,16 +15,16 @@ builtin_box_drawing = true
 
 ## Font family settings for different styles
 [font.normal]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font"
 
 [font.bold]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font"
 
 [font.bold_italic]
-family = "JetBrains Mono"
+family = "JetBrainsMono Nerd Font"
 
 [font.offset]
 ## Extra space around each character.

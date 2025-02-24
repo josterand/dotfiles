@@ -42,7 +42,7 @@ TERM = "xterm-256color"
 [window]
 # Window appearance and behavior
 startup_mode = "Windowed"
-decorations = "None"
+decorations = "Full"
 decorations_theme_variant = "None"
 dynamic_padding = false
 opacity = 1.0
