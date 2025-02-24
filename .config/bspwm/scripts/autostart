@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# ***************************************************
+# Author: Jonathan Steve Roland (josterand)
+# Github: https://github.com/josterand
+#
+# This project is licensed under the MIT License.
+# Copyright (c) 2024 Jonathan Steve Roland (josterand).
+# For detailed terms and conditions, please refer to
+# the LICENSE file included with this project.
+# ***************************************************
+
+# ==========[ AUTOSTART PROGRAMS ]==========
+
+# Monitor setup
+xrandr --output LVDS-1 --mode 1440x900 &
+
+# Keyring agent
+gnome-keyring-daemon --start --components=pkcs11 &
+
+# Cursor fix
+xsetroot -cursor_name left_ptr &
+
+# Start sxhkd (hotkey daemon)
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Set wallpaper
+feh -g 1440x900 --bg-fill ~/Developments/Repos/dotfiles-wallpapers/Categories/amilia.jpg &
+
+# Start panel (Polybar)
+~/.config/polybar/scripts/launch.sh &
+
+# Notification daemon
+dunst --config ~/.config/dunst/dunstrc &
+
+# Authentication agent (Polkit)
+lxpolkit &
