@@ -21,15 +21,15 @@ super + f
 
 # Appmenu
 super + @space
-    $HOME/.config/rofi/scripts/appmenu
+    $HOME/.config/bspwm/scripts/appmenu
 
 # Powermenu
 super + Escape
-    $HOME/.config/rofi/scripts/powermenu
+    $HOME/.config/bspwm/scripts/powermenu
 
-# Wifimenu
-super + w
-    $HOME/.config/rofi/scripts/wifimenu
+# Screenshot
+super + F11
+    $HOME/.config/bspwm/scripts/screenshot
 
 # Reload SXHKD configuration
 super + r
@@ -145,6 +145,3 @@ super + alt + shift + {h,j,k,l}
 # Move floating window
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
-
-super + ~button3
-	jgmenu_run
