@@ -1,0 +1,12 @@
+# Development environment configurations
+/.git
+/.github
+/.vscode
+/.editorconfig
+/.gitignore
+
+# Files
+/LICENSE
+/README.md
+/ROADMAP.md
+/INSTALL.md
