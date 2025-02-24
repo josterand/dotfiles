@@ -1,0 +1,70 @@
+#!/bin/sh
+
+# ***************************************************
+# Author: Jonathan Steve Roland (josterand)
+# Github: https://github.com/josterand
+#
+# This project is licensed under the MIT License.
+# Copyright (c) 2024 Jonathan Steve Roland (josterand).
+# For detailed terms and conditions, please refer to
+# the LICENSE file included with this project.
+# ***************************************************
+
+# [ ATTENTION ]
+# This configuration is designed to work on my laptop monitor only.
+# My monitor resolution is 1440x900 with 96 dpi.
+# Some variables like monitor name, resolution, and dpi may need to be changed to work properly with yours.
+
+# [ AUTOSTARTED WHEN BOOT ]
+# Make sure everything is displayed on the main monitor
+xrandr --output LVDS-1 --mode 1440x900 &
+
+# Start keyring agent
+gnome-keyring-daemon --start --components=pkcs11 &
+
+# Fix cursor error when boot
+xsetroot -cursor_name left_ptr &
+
+# Check if sxhkd is already running, if not, run it. If it is, leave it.
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Show wallpaper
+# Just change the wallpaper path
+feh -g 1440x900 --bg-fill ~/Pictures/Wallpapers/mountain.jpg &
+
+# Activate the panel
+~/.config/polybar/scripts/launch.sh &
+
+# Activate the notification daemon
+dunst --config ~/.config/dunst/dunstrc &
+
+# Activate polkit for authorization requests
+lxpolkit &
+
+# [ BSPWM CONFIGURATIONS ]
+# Make sure to describe your active connected screen name here
+# Use xrandr command to check currently active connected screen
+bspc monitor -d 1 2 3 4 5 6
+
+# - APPEARANCE -
+bspc config window_gap 10
+bspc config bottom_padding 5
+bspc config left_padding 5
+bspc config right_padding 5
+bspc config border_width 1
+bspc config normal_border_color "#BDBDBD"
+bspc config focused_border_color "#FFFFFF"
+
+bspc config split_ratio 0.5
+bspc config single_monocle false
+bspc config gapless_monocle true
+bspc config borderless_monocle false
+
+# - BEHAVIOUR -
+bspc config focus_follows_pointer true
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config remove_disabled_monitors true
+bspc config merge_overlapping_monitors true
