@@ -1,0 +1,9 @@
+# Development environment configurations
+.vscode/*
+
+# Auto-generated files and junks
+*.uuid
+
+# Temporary files and folders
+tmp/*
+test.sh
