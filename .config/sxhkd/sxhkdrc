@@ -20,7 +20,7 @@ super + f
     thunar
 
 # Appmenu
-super + @space
+super + d
     $HOME/.config/bspwm/scripts/appmenu
 
 # Powermenu
