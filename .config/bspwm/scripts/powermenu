@@ -11,12 +11,13 @@
 # ***************************************************
 
 # A simple and straightforward script I created to display a power menu.
-# This script is specific and can only be used with rofi and the i3wm environment.
+# This script is specific and can only be used with rofi.
 # Note that you need to use systemd to be able to run this script
 # because the commands used to manage power states are from systemd ('systemctl' command).
 
 # ==========[ VARIABLES ]==========
 # Define icons for each option
+# NOTE: THE FONT I USE FOR THE ICONS IS 'FONT AWESOME 6 FREE' (https://fontawesome.com/)
 suspend=""
 exit=""
 shutdown=""
@@ -42,7 +43,11 @@ case "$selected_option" in
     systemctl suspend
     ;;
 "$exit")
-    i3-msg exit
+    # Uncomment the line below if you're using i3 window manager
+    #i3-msg exit
+
+    # Uncomment the line below if you're using bspwm window manager
+    bspc quit
     ;;
 "$shutdown")
     systemctl poweroff
