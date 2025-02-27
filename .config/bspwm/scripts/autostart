@@ -30,11 +30,11 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Set wallpaper
 feh -g 1440x900 --bg-fill ~/Developments/Repos/dotfiles-wallpapers/Categories/amilia.jpg &
 
-# Start panel (Polybar)
+# Start Polybar
 ~/.config/polybar/scripts/launch.sh &
 
-# Notification daemon
+# Start Dunst
 dunst --config ~/.config/dunst/dunstrc &
 
-# Authentication agent (Polkit)
+# Start authentication agent
 lxpolkit &
