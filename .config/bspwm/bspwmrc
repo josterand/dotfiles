@@ -15,13 +15,18 @@
 # Some variables like monitor name, resolution, and dpi may need to be changed to work properly with yours.
 
 # ==========[ AUTOSTART ]==========
-~/.config/bspwm/scripts/autostart &
+# Run applications that should start as soon as bspwm starts
+[ -x ~/.config/bspwm/scripts/autostart ] && ~/.config/bspwm/scripts/autostart &
+
+# Rules script is optional and can be used to set specific rules for applications
+# Execute rules script if it exists
+[ -x ~/.config/bspwm/scripts/rules ] && ~/.config/bspwm/scripts/rules || notify-send --urgency=critical "bspwm Alert" "Rules script not found. No specific rules will be applied."
 
 # ==========[ WORKSPACES ]==========
 # Set workspaces for main monitor
 # Make sure to describe your active connected screen name here
 # Use xrandr command to check currently active connected screen
-bspc monitor -d 1 2 3 4 5 6
+bspc monitor -d 1 2 3 4 5 6 7
 
 # ==========[ APPEARANCE ]==========
 bspc config window_gap 10
