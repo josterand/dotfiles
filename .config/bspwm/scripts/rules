@@ -11,8 +11,12 @@
 # ***************************************************
 
 # ==========[ WINDOW ASSIGNMENTS ]==========
+# Assign windows to specific desktops
+# Use `xprop | grep WM_CLASS` command to get the class name of the window
+
+# Assign Google Chrome to desktop 1
 bspc rule -a Google-chrome desktop=^1 follow=on
-
+# Assign Visual Studio Code to desktop 2
 bspc rule -a Code desktop=^2 follow=on
-
+# Assign Alacritty to desktop 3
 bspc rule -a Alacritty desktop=^3 follow=on focus=on
